@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Enwang 2",
+    "wardcode": "AKSENW05",
+    "lganame": "Mbo",
+    "statename": "Akwa Ibom"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-08",
+      "event_count": 1,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-10",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

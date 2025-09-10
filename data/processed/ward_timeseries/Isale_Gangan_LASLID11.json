@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Isale Gangan",
+    "wardcode": "LASLID11",
+    "lganame": "Lagos Island",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2018-01",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2019-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

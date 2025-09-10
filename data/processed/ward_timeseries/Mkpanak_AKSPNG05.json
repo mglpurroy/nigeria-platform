@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Mkpanak",
+    "wardcode": "AKSPNG05",
+    "lganame": "Ibeno",
+    "statename": "Akwa Ibom"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "ward_info": {
+    "wardname": "Orji 1 and 2",
+    "wardcode": "IMSRRT15",
+    "lganame": "Owerri North",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2013-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2015-01",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2019-06",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2020-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2020-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2020-10",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2021-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-05",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2021-06",
+      "event_count": 1,
+      "total_fatalities": 8,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2021-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-12",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2023-09",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-10",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-07",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2024-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

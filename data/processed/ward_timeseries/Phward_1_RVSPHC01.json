@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Phward 1",
+    "wardcode": "RVSPHC01",
+    "lganame": "Port-Harcourt",
+    "statename": "Rivers"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2021-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-09",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

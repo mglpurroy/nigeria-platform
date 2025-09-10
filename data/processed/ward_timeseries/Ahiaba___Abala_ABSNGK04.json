@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Ahiaba / Abala",
+    "wardcode": "ABSNGK04",
+    "lganame": "Obi Nwga",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2008-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2020-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

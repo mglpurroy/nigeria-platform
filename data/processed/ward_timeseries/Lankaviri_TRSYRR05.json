@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Lankaviri",
+    "wardcode": "TRSYRR05",
+    "lganame": "Yorro",
+    "statename": "Taraba"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

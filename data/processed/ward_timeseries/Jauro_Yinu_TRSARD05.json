@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Jauro Yinu",
+    "wardcode": "TRSARD05",
+    "lganame": "Ardo-Kola",
+    "statename": "Taraba"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    }
+  ]
+}

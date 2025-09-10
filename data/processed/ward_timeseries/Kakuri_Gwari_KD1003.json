@@ -1,0 +1,98 @@
+{
+  "ward_info": {
+    "wardname": "Kakuri Gwari",
+    "wardcode": "KD1003",
+    "lganame": "Kaduna South",
+    "statename": "Kaduna"
+  },
+  "time_series": [
+    {
+      "year_month": "2014-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2016-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2018-10",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2021-07",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2021-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2023-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2023-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2024-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2025-04",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

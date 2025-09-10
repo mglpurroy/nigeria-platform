@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Kpiri-Kpiri",
+    "wardcode": "EBSUGB10",
+    "lganame": "Ebonyi",
+    "statename": "Ebonyi"
+  },
+  "time_series": [
+    {
+      "year_month": "2020-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

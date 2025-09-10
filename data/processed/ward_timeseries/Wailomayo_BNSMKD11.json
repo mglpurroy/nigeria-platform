@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Wailomayo",
+    "wardcode": "BNSMKD11",
+    "lganame": "Makurdi",
+    "statename": "Benue"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2022-05",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

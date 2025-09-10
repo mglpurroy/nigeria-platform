@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Itasa / Idikoago",
+    "wardcode": "OYSIJA07",
+    "lganame": "Iwajowa",
+    "statename": "Oyo"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

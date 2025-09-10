@@ -1,0 +1,42 @@
+{
+  "ward_info": {
+    "wardname": "Narayi",
+    "wardcode": "KD0207",
+    "lganame": "Chikun",
+    "statename": "Kaduna"
+  },
+  "time_series": [
+    {
+      "year_month": "2018-03",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 2
+      }
+    },
+    {
+      "year_month": "2020-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2020-09",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

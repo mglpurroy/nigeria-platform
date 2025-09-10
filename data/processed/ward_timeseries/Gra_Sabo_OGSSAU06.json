@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Gra Sabo",
+    "wardcode": "OGSSAU06",
+    "lganame": "Shagamu",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2010-03",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

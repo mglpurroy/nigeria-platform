@@ -1,0 +1,19 @@
+{
+  "ward_info": {
+    "wardname": "Jeremi 4",
+    "wardcode": "DTSJRT08",
+    "lganame": "Ughelli South",
+    "statename": "Delta"
+  },
+  "time_series": [
+    {
+      "year_month": "2018-11",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1,
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Agura / Sabo 2",
+    "wardcode": "OGSSAU02",
+    "lganame": "Shagamu",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2017-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

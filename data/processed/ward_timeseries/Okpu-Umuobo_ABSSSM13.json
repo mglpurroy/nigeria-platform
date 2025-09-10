@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Okpu-Umuobo",
+    "wardcode": "ABSSSM13",
+    "lganame": "Osisioma Ngwa",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-10",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

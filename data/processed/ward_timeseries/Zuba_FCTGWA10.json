@@ -1,0 +1,139 @@
+{
+  "ward_info": {
+    "wardname": "Zuba",
+    "wardcode": "FCTGWA10",
+    "lganame": "Gwagwalada",
+    "statename": "Fct"
+  },
+  "time_series": [
+    {
+      "year_month": "2011-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2011-12",
+      "event_count": 1,
+      "total_fatalities": 43,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2018-10",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2021-03",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2021-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2022-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-07",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2022-08",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-10",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2023-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2024-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2024-11",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2025-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

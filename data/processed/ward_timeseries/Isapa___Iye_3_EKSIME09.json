@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Isapa / Iye 3",
+    "wardcode": "EKSIME09",
+    "lganame": "Ilejemeje",
+    "statename": "Ekiti"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Umukegwu / Umuopia",
+    "wardcode": "IMSURU16",
+    "lganame": "Ideato North",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Katami South",
+    "wardcode": "61507",
+    "lganame": "Silame",
+    "statename": "Sokoto"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "ward_info": {
+    "wardname": "Isowopo 2",
+    "wardcode": "ODSANE08",
+    "lganame": "Akoko North East",
+    "statename": "Ondo"
+  },
+  "time_series": [
+    {
+      "year_month": "2018-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2020-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-02",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-07",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2025-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

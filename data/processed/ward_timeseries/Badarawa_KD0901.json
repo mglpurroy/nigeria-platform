@@ -1,0 +1,74 @@
+{
+  "ward_info": {
+    "wardname": "Badarawa",
+    "wardcode": "KD0901",
+    "lganame": "Kaduna North",
+    "statename": "Kaduna"
+  },
+  "time_series": [
+    {
+      "year_month": "2018-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2018-09",
+      "event_count": 1,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-08",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2025-01",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2025-02",
+      "event_count": 1,
+      "total_fatalities": 10,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

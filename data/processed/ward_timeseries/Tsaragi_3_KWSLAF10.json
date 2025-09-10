@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Tsaragi 3",
+    "wardcode": "KWSLAF10",
+    "lganame": "Edu",
+    "statename": "Kwara"
+  },
+  "time_series": [
+    {
+      "year_month": "2013-10",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2015-12",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 2
+      }
+    },
+    {
+      "year_month": "2025-06",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

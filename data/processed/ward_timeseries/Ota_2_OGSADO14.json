@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ota 2",
+    "wardcode": "OGSADO14",
+    "lganame": "Ado Odo/Ota",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

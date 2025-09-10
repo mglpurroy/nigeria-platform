@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Tarauni",
+    "wardcode": "KN3807",
+    "lganame": "Tarauni",
+    "statename": "Kano"
+  },
+  "time_series": [
+    {
+      "year_month": "2020-09",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2023-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

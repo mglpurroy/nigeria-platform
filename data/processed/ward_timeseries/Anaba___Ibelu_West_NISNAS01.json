@@ -1,0 +1,19 @@
+{
+  "ward_info": {
+    "wardname": "Anaba / Ibelu West",
+    "wardcode": "NISNAS01",
+    "lganame": "Magama",
+    "statename": "Niger"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-05",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Battles": 1
+      }
+    }
+  ]
+}

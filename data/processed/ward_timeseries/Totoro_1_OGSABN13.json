@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Totoro 1",
+    "wardcode": "OGSABN13",
+    "lganame": "Abeokuta North",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-03",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

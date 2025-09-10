@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Mbaanyam / Ikov",
+    "wardcode": "BNSSEL02",
+    "lganame": "Ushongo",
+    "statename": "Benue"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-03",
+      "event_count": 1,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

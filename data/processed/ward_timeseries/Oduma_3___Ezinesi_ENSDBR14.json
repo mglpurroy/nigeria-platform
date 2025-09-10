@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Oduma 3 / Ezinesi",
+    "wardcode": "ENSDBR14",
+    "lganame": "Aninri",
+    "statename": "Enugu"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

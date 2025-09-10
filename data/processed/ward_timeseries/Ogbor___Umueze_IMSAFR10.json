@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ogbor / Umueze",
+    "wardcode": "IMSAFR10",
+    "lganame": "Ahiazu-Mbaise",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-02",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

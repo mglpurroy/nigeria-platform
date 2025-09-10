@@ -1,0 +1,27 @@
+{
+  "ward_info": {
+    "wardname": "Awgbu 2",
+    "wardcode": "ANSAJL06",
+    "lganame": "Orumba North",
+    "statename": "Anambra"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-05",
+      "event_count": 2,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-03",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 2
+      }
+    }
+  ]
+}

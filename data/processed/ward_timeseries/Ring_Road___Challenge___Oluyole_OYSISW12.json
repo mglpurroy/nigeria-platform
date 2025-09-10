@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Ring Road / Challenge / Oluyole",
+    "wardcode": "OYSISW12",
+    "lganame": "Ibadan South West",
+    "statename": "Oyo"
+  },
+  "time_series": [
+    {
+      "year_month": "2018-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2023-05",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

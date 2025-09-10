@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Obward 17",
+    "wardcode": "RVSRUM17",
+    "lganame": "Obio/Akpor",
+    "statename": "Rivers"
+  },
+  "time_series": [
+    {
+      "year_month": "2016-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2020-12",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-08",
+      "event_count": 1,
+      "total_fatalities": 5,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

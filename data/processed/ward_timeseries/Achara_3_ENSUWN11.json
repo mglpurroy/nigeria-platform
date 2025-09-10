@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Achara 3",
+    "wardcode": "ENSUWN11",
+    "lganame": "Enugu South",
+    "statename": "Enugu"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-06",
+      "event_count": 2,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Battles": 2
+      }
+    }
+  ]
+}

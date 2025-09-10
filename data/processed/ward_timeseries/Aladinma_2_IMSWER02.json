@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Aladinma 2",
+    "wardcode": "IMSWER02",
+    "lganame": "Owerri Municipal",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

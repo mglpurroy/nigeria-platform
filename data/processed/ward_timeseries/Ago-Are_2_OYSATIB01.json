@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ago-Are 2",
+    "wardcode": "OYSATIB01",
+    "lganame": "Atisbo",
+    "statename": "Oyo"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-02",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

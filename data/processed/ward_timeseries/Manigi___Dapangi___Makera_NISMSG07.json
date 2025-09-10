@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Manigi / Dapangi / Makera",
+    "wardcode": "NISMSG07",
+    "lganame": "Mashegu",
+    "statename": "Niger"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-01",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    }
+  ]
+}

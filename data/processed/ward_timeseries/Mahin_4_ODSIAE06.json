@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Mahin 4",
+    "wardcode": "ODSIAE06",
+    "lganame": "Ilaje",
+    "statename": "Ondo"
+  },
+  "time_series": [
+    {
+      "year_month": "2009-11",
+      "event_count": 1,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2016-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

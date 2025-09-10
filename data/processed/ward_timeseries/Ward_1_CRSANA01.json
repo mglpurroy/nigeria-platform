@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ward 1",
+    "wardcode": "CRSANA01",
+    "lganame": "Calabar South",
+    "statename": "Cross River"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-10",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

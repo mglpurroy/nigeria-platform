@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Ubulu 1 and 2",
+    "wardcode": "IMSNGB13",
+    "lganame": "Oru West",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2021-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

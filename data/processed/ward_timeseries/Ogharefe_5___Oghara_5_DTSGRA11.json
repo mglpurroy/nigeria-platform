@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ogharefe 5 / Oghara 5",
+    "wardcode": "DTSGRA11",
+    "lganame": "Ethiope West",
+    "statename": "Delta"
+  },
+  "time_series": [
+    {
+      "year_month": "2016-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

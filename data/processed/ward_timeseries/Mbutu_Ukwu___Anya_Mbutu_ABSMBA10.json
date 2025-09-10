@@ -1,0 +1,19 @@
+{
+  "ward_info": {
+    "wardname": "Mbutu Ukwu / Anya Mbutu",
+    "wardcode": "ABSMBA10",
+    "lganame": "Isiala-Ngwa South",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2016-12",
+      "event_count": 4,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Violence against civilians": 3,
+        "Battles": 1
+      }
+    }
+  ]
+}

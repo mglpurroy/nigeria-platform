@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Okata",
+    "wardcode": "IMSIHI10",
+    "lganame": "Ihitte/Uboma",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2020-03",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

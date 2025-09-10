@@ -1,0 +1,27 @@
+{
+  "ward_info": {
+    "wardname": "Siriwon /  Igbekodo 2",
+    "wardcode": "LASIUI12",
+    "lganame": "Ibeju Lekki",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2016-06",
+      "event_count": 1,
+      "total_fatalities": 10,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2017-05",
+      "event_count": 2,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Battles": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Awaka Ihitte",
+    "wardcode": "IMSRRT03",
+    "lganame": "Owerri North",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-02",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Brass 3",
+    "wardcode": "BYSBRS03",
+    "lganame": "Brass",
+    "statename": "Bayelsa"
+  },
+  "time_series": [
+    {
+      "year_month": "2009-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

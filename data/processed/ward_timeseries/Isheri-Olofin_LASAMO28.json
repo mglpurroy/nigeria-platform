@@ -1,0 +1,42 @@
+{
+  "ward_info": {
+    "wardname": "Isheri-Olofin",
+    "wardcode": "LASAMO28",
+    "lganame": "Alimosho",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2017-11",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2023-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2025-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

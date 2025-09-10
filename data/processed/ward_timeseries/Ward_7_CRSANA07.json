@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Ward 7",
+    "wardcode": "CRSANA07",
+    "lganame": "Calabar South",
+    "statename": "Cross River"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2025-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

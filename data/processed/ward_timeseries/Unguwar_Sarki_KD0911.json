@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Unguwar Sarki",
+    "wardcode": "KD0911",
+    "lganame": "Kaduna North",
+    "statename": "Kaduna"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2021-08",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-08",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 3
+      }
+    }
+  ]
+}

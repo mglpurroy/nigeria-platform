@@ -1,0 +1,19 @@
+{
+  "ward_info": {
+    "wardname": "Shehuri North",
+    "wardcode": "12414",
+    "lganame": "Maiduguri",
+    "statename": "Borno"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-02",
+      "event_count": 3,
+      "total_fatalities": 25,
+      "event_type_breakdown": {
+        "Violence against civilians": 2,
+        "Battles": 1
+      }
+    }
+  ]
+}

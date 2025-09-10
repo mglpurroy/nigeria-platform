@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Abejukolo 2",
+    "wardcode": "KGSBJK02",
+    "lganame": "Omala",
+    "statename": "Kogi"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2015-07",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2018-03",
+      "event_count": 1,
+      "total_fatalities": 25,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ibeku West",
+    "wardcode": "ABSUMA07",
+    "lganame": "Umuahia North",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-09",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

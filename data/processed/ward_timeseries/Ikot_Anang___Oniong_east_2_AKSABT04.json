@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ikot Anang / Oniong east 2",
+    "wardcode": "AKSABT04",
+    "lganame": "Onna",
+    "statename": "Akwa Ibom"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

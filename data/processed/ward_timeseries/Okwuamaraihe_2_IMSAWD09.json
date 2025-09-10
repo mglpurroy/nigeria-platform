@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Okwuamaraihe 2",
+    "wardcode": "IMSAWD09",
+    "lganame": "Orsu",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-03",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2025-01",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

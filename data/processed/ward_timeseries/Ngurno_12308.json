@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Ngurno",
+    "wardcode": "12308",
+    "lganame": "Monguno",
+    "statename": "Borno"
+  },
+  "time_series": [
+    {
+      "year_month": "2016-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2018-06",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

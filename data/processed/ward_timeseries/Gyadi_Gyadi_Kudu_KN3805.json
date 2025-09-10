@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Gyadi Gyadi Kudu",
+    "wardcode": "KN3805",
+    "lganame": "Tarauni",
+    "statename": "Kano"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Adazi Ani 1",
+    "wardcode": "ANSNEN03",
+    "lganame": "Anaocha",
+    "statename": "Anambra"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-03",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Offot 1",
+    "wardcode": "AKSDYY10",
+    "lganame": "Uyo",
+    "statename": "Akwa Ibom"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-02",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

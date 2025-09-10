@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Egini / Ovwian 2",
+    "wardcode": "DTSALA02",
+    "lganame": "Udu",
+    "statename": "Delta"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-01",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

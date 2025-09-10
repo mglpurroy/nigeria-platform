@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Agborogbomo",
+    "wardcode": "OGSION03",
+    "lganame": "Imeko Afon",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-04",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

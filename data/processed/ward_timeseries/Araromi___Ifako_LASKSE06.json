@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Araromi / Ifako",
+    "wardcode": "LASKSE06",
+    "lganame": "Kosofe",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2020-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2023-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Obward 12",
+    "wardcode": "RVSRUM12",
+    "lganame": "Obio/Akpor",
+    "statename": "Rivers"
+  },
+  "time_series": [
+    {
+      "year_month": "1999-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2020-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Umuozzi 3",
+    "wardcode": "ENSENZ09",
+    "lganame": "Igbo-Eze North",
+    "statename": "Enugu"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-01",
+      "event_count": 1,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

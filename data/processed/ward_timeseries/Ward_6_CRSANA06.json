@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Ward 6",
+    "wardcode": "CRSANA06",
+    "lganame": "Calabar South",
+    "statename": "Cross River"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2023-04",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2023-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

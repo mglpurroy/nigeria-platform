@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Osopong 2 / Osopong 1",
+    "wardcode": "CRSBRA05",
+    "lganame": "Obubra",
+    "statename": "Cross River"
+  },
+  "time_series": [
+    {
+      "year_month": "2017-01",
+      "event_count": 1,
+      "total_fatalities": 5,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

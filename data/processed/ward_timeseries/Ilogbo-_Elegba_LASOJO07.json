@@ -1,0 +1,43 @@
+{
+  "ward_info": {
+    "wardname": "Ilogbo- Elegba",
+    "wardcode": "LASOJO07",
+    "lganame": "Ojo",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2020-05",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2022-12",
+      "event_count": 4,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 4
+      }
+    },
+    {
+      "year_month": "2023-01",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 3
+      }
+    },
+    {
+      "year_month": "2023-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

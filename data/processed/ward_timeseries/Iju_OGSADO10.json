@@ -1,0 +1,50 @@
+{
+  "ward_info": {
+    "wardname": "Iju",
+    "wardcode": "OGSADO10",
+    "lganame": "Ado Odo/Ota",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2021-05",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 2
+      }
+    },
+    {
+      "year_month": "2023-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2025-02",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

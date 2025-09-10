@@ -1,0 +1,234 @@
+{
+  "analysis_metadata": {
+    "analysis_date": "2025-09-10T15:44:32.028633",
+    "total_wards_analyzed": 649,
+    "date_range": {
+      "start": "1997-01",
+      "end": "2025-07"
+    }
+  },
+  "overall_statistics": {
+    "total_events": 13173,
+    "total_fatalities": 23080,
+    "average_events_per_month": 38.63049853372434,
+    "average_fatalities_per_month": 67.68328445747801
+  },
+  "temporal_analysis": {
+    "peak_month_events": {
+      "month": "2020-10",
+      "events": 238
+    },
+    "peak_month_fatalities": {
+      "month": "2000-02",
+      "fatalities": 1452
+    },
+    "peak_year_events": {
+      "year": 2024,
+      "events": 1448
+    },
+    "peak_year_fatalities": {
+      "year": 2000,
+      "fatalities": 2412
+    }
+  },
+  "ward_analysis": {
+    "most_active_wards": [
+      {
+        "wardname": "Phward 17",
+        "statename": "Rivers",
+        "total_events": 611,
+        "total_fatalities": 325
+      },
+      {
+        "wardname": "Okepopo East",
+        "statename": "Lagos",
+        "total_events": 580,
+        "total_fatalities": 824
+      },
+      {
+        "wardname": "Unueru / Ogboka",
+        "statename": "Edo",
+        "total_events": 551,
+        "total_fatalities": 260
+      },
+      {
+        "wardname": "Ibrahim Katsina",
+        "statename": "Plateau",
+        "total_events": 392,
+        "total_fatalities": 2751
+      },
+      {
+        "wardname": "Shahuchi",
+        "statename": "Kano",
+        "total_events": 361,
+        "total_fatalities": 1300
+      },
+      {
+        "wardname": "Shaba",
+        "statename": "Kaduna",
+        "total_events": 342,
+        "total_fatalities": 2022
+      },
+      {
+        "wardname": "Oja Gbo",
+        "statename": "Oyo",
+        "total_events": 325,
+        "total_fatalities": 149
+      },
+      {
+        "wardname": "Azuzi 1",
+        "statename": "Imo",
+        "total_events": 314,
+        "total_fatalities": 102
+      },
+      {
+        "wardname": "Bowen",
+        "statename": "Delta",
+        "total_events": 312,
+        "total_fatalities": 793
+      },
+      {
+        "wardname": "Atissa 1",
+        "statename": "Bayelsa",
+        "total_events": 307,
+        "total_fatalities": 248
+      }
+    ],
+    "most_fatal_wards": [
+      {
+        "wardname": "Ibrahim Katsina",
+        "statename": "Plateau",
+        "total_events": 392,
+        "total_fatalities": 2751
+      },
+      {
+        "wardname": "Shaba",
+        "statename": "Kaduna",
+        "total_events": 342,
+        "total_fatalities": 2022
+      },
+      {
+        "wardname": "Shahuchi",
+        "statename": "Kano",
+        "total_events": 361,
+        "total_fatalities": 1300
+      },
+      {
+        "wardname": "Okepopo East",
+        "statename": "Lagos",
+        "total_events": 580,
+        "total_fatalities": 824
+      },
+      {
+        "wardname": "Bowen",
+        "statename": "Delta",
+        "total_events": 312,
+        "total_fatalities": 793
+      },
+      {
+        "wardname": "Sigal Karche",
+        "statename": "Borno",
+        "total_events": 32,
+        "total_fatalities": 731
+      },
+      {
+        "wardname": "Jesse 1",
+        "statename": "Delta",
+        "total_events": 12,
+        "total_fatalities": 722
+      },
+      {
+        "wardname": "Aba Town Hall",
+        "statename": "Abia",
+        "total_events": 167,
+        "total_fatalities": 702
+      },
+      {
+        "wardname": "Faru",
+        "statename": "Katsina",
+        "total_events": 108,
+        "total_fatalities": 465
+      },
+      {
+        "wardname": "Ankpa / Wadata",
+        "statename": "Benue",
+        "total_events": 283,
+        "total_fatalities": 438
+      }
+    ],
+    "highest_intensity_wards": [
+      {
+        "wardname": "Mbutu Ukwu / Anya Mbutu",
+        "statename": "Abia",
+        "event_intensity": 4.0,
+        "total_events": 4
+      },
+      {
+        "wardname": "Unueru / Ogboka",
+        "statename": "Edo",
+        "event_intensity": 3.422360248447205,
+        "total_events": 551
+      },
+      {
+        "wardname": "Lajinge",
+        "statename": "Sokoto",
+        "event_intensity": 3.25,
+        "total_events": 13
+      },
+      {
+        "wardname": "Aktward 11",
+        "statename": "Rivers",
+        "event_intensity": 3.0,
+        "total_events": 15
+      },
+      {
+        "wardname": "Gandi 2",
+        "statename": "Sokoto",
+        "event_intensity": 3.0,
+        "total_events": 3
+      },
+      {
+        "wardname": "Ibara 1",
+        "statename": "Ogun",
+        "event_intensity": 3.0,
+        "total_events": 3
+      },
+      {
+        "wardname": "Igga / Asaba",
+        "statename": "Enugu",
+        "event_intensity": 3.0,
+        "total_events": 3
+      },
+      {
+        "wardname": "Monatan / Iyanachurch",
+        "statename": "Oyo",
+        "event_intensity": 3.0,
+        "total_events": 3
+      },
+      {
+        "wardname": "Shehuri North",
+        "statename": "Borno",
+        "event_intensity": 3.0,
+        "total_events": 3
+      },
+      {
+        "wardname": "Phward 17",
+        "statename": "Rivers",
+        "event_intensity": 2.6223175965665235,
+        "total_events": 611
+      }
+    ]
+  },
+  "event_type_analysis": {
+    "distribution": {
+      "Protests": 4719,
+      "Violence against civilians": 3154,
+      "Battles": 2575,
+      "Riots": 1871,
+      "Strategic developments": 517,
+      "Explosions/Remote violence": 337
+    },
+    "most_common_event_type": "Protests",
+    "least_common_event_type": "Explosions/Remote violence"
+  }
+}

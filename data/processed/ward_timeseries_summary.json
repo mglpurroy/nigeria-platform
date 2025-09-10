@@ -1,0 +1,335 @@
+{
+  "overview": {
+    "total_wards": 641,
+    "total_events": 13173,
+    "total_fatalities": 23080,
+    "date_range": {
+      "start": "1997-01",
+      "end": "2025-07"
+    }
+  },
+  "top_wards_by_fatalities": [
+    {
+      "wardname": "Ibrahim Katsina",
+      "wardcode": "PLSJJN07",
+      "lganame": "Jos North",
+      "statename": "Plateau",
+      "event_count": 392,
+      "total_fatalities": 2751
+    },
+    {
+      "wardname": "Shaba",
+      "wardcode": "KD0908",
+      "lganame": "Kaduna North",
+      "statename": "Kaduna",
+      "event_count": 342,
+      "total_fatalities": 2022
+    },
+    {
+      "wardname": "Shahuchi",
+      "wardcode": "KN2106",
+      "lganame": "Kano Municipal",
+      "statename": "Kano",
+      "event_count": 361,
+      "total_fatalities": 1300
+    },
+    {
+      "wardname": "Okepopo East",
+      "wardcode": "LASLID16",
+      "lganame": "Lagos Island",
+      "statename": "Lagos",
+      "event_count": 580,
+      "total_fatalities": 824
+    },
+    {
+      "wardname": "Bowen",
+      "wardcode": "DTSWWR02",
+      "lganame": "Warri South",
+      "statename": "Delta",
+      "event_count": 312,
+      "total_fatalities": 793
+    },
+    {
+      "wardname": "Sigal Karche",
+      "wardcode": "11509",
+      "lganame": "Kala Balge",
+      "statename": "Borno",
+      "event_count": 32,
+      "total_fatalities": 731
+    },
+    {
+      "wardname": "Jesse 1",
+      "wardcode": "DTSGRA01",
+      "lganame": "Ethiope West",
+      "statename": "Delta",
+      "event_count": 12,
+      "total_fatalities": 722
+    },
+    {
+      "wardname": "Aba Town Hall",
+      "wardcode": "ABSABA02",
+      "lganame": "Aba South",
+      "statename": "Abia",
+      "event_count": 167,
+      "total_fatalities": 702
+    },
+    {
+      "wardname": "Faru",
+      "wardcode": "41603",
+      "lganame": "Jibia",
+      "statename": "Katsina",
+      "event_count": 108,
+      "total_fatalities": 465
+    },
+    {
+      "wardname": "Ankpa / Wadata",
+      "wardcode": "BNSMKD02",
+      "lganame": "Makurdi",
+      "statename": "Benue",
+      "event_count": 283,
+      "total_fatalities": 438
+    },
+    {
+      "wardname": "Chikaji",
+      "wardcode": "KD1903",
+      "lganame": "Sabon Gari",
+      "statename": "Kaduna",
+      "event_count": 69,
+      "total_fatalities": 423
+    },
+    {
+      "wardname": "Bolewa A",
+      "wardcode": "71406",
+      "lganame": "Potiskum",
+      "statename": "Yobe",
+      "event_count": 86,
+      "total_fatalities": 416
+    },
+    {
+      "wardname": "Sarkin Dawaki",
+      "wardcode": "TRSJAL05",
+      "lganame": "Jalingo",
+      "statename": "Taraba",
+      "event_count": 126,
+      "total_fatalities": 407
+    },
+    {
+      "wardname": "Mainok",
+      "wardcode": "11410",
+      "lganame": "Kaga",
+      "statename": "Borno",
+      "event_count": 48,
+      "total_fatalities": 335
+    },
+    {
+      "wardname": "Gubio 2",
+      "wardcode": "10905",
+      "lganame": "Gubio",
+      "statename": "Borno",
+      "event_count": 63,
+      "total_fatalities": 329
+    },
+    {
+      "wardname": "Phward 17",
+      "wardcode": "RVSPHC17",
+      "lganame": "Port-Harcourt",
+      "statename": "Rivers",
+      "event_count": 611,
+      "total_fatalities": 325
+    },
+    {
+      "wardname": "Herwa Gana",
+      "wardcode": "GMSGME06",
+      "lganame": "Gombe",
+      "statename": "Gombe",
+      "event_count": 96,
+      "total_fatalities": 318
+    },
+    {
+      "wardname": "Big Qua / Four",
+      "wardcode": "CRSCAL10",
+      "lganame": "Calabar Municipal",
+      "statename": "Cross River",
+      "event_count": 264,
+      "total_fatalities": 314
+    },
+    {
+      "wardname": "Hardo",
+      "wardcode": "BA0215",
+      "lganame": "Bauchi",
+      "statename": "Bauchi",
+      "event_count": 184,
+      "total_fatalities": 296
+    },
+    {
+      "wardname": "Sabon Gari",
+      "wardcode": "NISMNA09",
+      "lganame": "Chanchaga",
+      "statename": "Niger",
+      "event_count": 119,
+      "total_fatalities": 276
+    }
+  ],
+  "top_wards_by_events": [
+    {
+      "wardname": "Phward 17",
+      "wardcode": "RVSPHC17",
+      "lganame": "Port-Harcourt",
+      "statename": "Rivers",
+      "event_count": 611,
+      "total_fatalities": 325
+    },
+    {
+      "wardname": "Okepopo East",
+      "wardcode": "LASLID16",
+      "lganame": "Lagos Island",
+      "statename": "Lagos",
+      "event_count": 580,
+      "total_fatalities": 824
+    },
+    {
+      "wardname": "Unueru / Ogboka",
+      "wardcode": "EDSBEN12",
+      "lganame": "Oredo",
+      "statename": "Edo",
+      "event_count": 551,
+      "total_fatalities": 260
+    },
+    {
+      "wardname": "Ibrahim Katsina",
+      "wardcode": "PLSJJN07",
+      "lganame": "Jos North",
+      "statename": "Plateau",
+      "event_count": 392,
+      "total_fatalities": 2751
+    },
+    {
+      "wardname": "Shahuchi",
+      "wardcode": "KN2106",
+      "lganame": "Kano Municipal",
+      "statename": "Kano",
+      "event_count": 361,
+      "total_fatalities": 1300
+    },
+    {
+      "wardname": "Shaba",
+      "wardcode": "KD0908",
+      "lganame": "Kaduna North",
+      "statename": "Kaduna",
+      "event_count": 342,
+      "total_fatalities": 2022
+    },
+    {
+      "wardname": "Oja Gbo",
+      "wardcode": "OYSINE09",
+      "lganame": "Ibadan North East",
+      "statename": "Oyo",
+      "event_count": 325,
+      "total_fatalities": 149
+    },
+    {
+      "wardname": "Azuzi 1",
+      "wardcode": "IMSWER03",
+      "lganame": "Owerri Municipal",
+      "statename": "Imo",
+      "event_count": 314,
+      "total_fatalities": 102
+    },
+    {
+      "wardname": "Bowen",
+      "wardcode": "DTSWWR02",
+      "lganame": "Warri South",
+      "statename": "Delta",
+      "event_count": 312,
+      "total_fatalities": 793
+    },
+    {
+      "wardname": "Atissa 1",
+      "wardcode": "BYSYEN01",
+      "lganame": "Yenegoa",
+      "statename": "Bayelsa",
+      "event_count": 307,
+      "total_fatalities": 248
+    },
+    {
+      "wardname": "Gbonmi",
+      "wardcode": "OSSOSO09",
+      "lganame": "Osogbo",
+      "statename": "Osun",
+      "event_count": 302,
+      "total_fatalities": 51
+    },
+    {
+      "wardname": "Ankpa / Wadata",
+      "wardcode": "BNSMKD02",
+      "lganame": "Makurdi",
+      "statename": "Benue",
+      "event_count": 283,
+      "total_fatalities": 438
+    },
+    {
+      "wardname": "Big Qua / Four",
+      "wardcode": "CRSCAL10",
+      "lganame": "Calabar Municipal",
+      "statename": "Cross River",
+      "event_count": 264,
+      "total_fatalities": 314
+    },
+    {
+      "wardname": "Awka 6",
+      "wardcode": "ANSAWK04",
+      "lganame": "Awka South",
+      "statename": "Anambra",
+      "event_count": 255,
+      "total_fatalities": 183
+    },
+    {
+      "wardname": "Igbore / Ago Oba",
+      "wardcode": "OGSABS07",
+      "lganame": "Abeokuta South",
+      "statename": "Ogun",
+      "event_count": 252,
+      "total_fatalities": 81
+    },
+    {
+      "wardname": "Ekute",
+      "wardcode": "EKSADO03",
+      "lganame": "Ado-Ekiti",
+      "statename": "Ekiti",
+      "event_count": 225,
+      "total_fatalities": 49
+    },
+    {
+      "wardname": "Anifowoshe",
+      "wardcode": "LASIKA05",
+      "lganame": "Ikeja",
+      "statename": "Lagos",
+      "event_count": 224,
+      "total_fatalities": 22
+    },
+    {
+      "wardname": "Odoakpu 1",
+      "wardcode": "ANSFGG11",
+      "lganame": "Onitsha South",
+      "statename": "Anambra",
+      "event_count": 197,
+      "total_fatalities": 194
+    },
+    {
+      "wardname": "Hardo",
+      "wardcode": "BA0215",
+      "lganame": "Bauchi",
+      "statename": "Bauchi",
+      "event_count": 184,
+      "total_fatalities": 296
+    },
+    {
+      "wardname": "Aba Town Hall",
+      "wardcode": "ABSABA02",
+      "lganame": "Aba South",
+      "statename": "Abia",
+      "event_count": 167,
+      "total_fatalities": 702
+    }
+  ]
+}

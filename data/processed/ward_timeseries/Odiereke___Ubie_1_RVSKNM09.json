@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Odiereke / Ubie 1",
+    "wardcode": "RVSKNM09",
+    "lganame": "Ahoada West",
+    "statename": "Rivers"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-05",
+      "event_count": 1,
+      "total_fatalities": 5,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-09",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

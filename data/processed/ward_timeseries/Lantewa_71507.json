@@ -1,0 +1,35 @@
+{
+  "ward_info": {
+    "wardname": "Lantewa",
+    "wardcode": "71507",
+    "lganame": "Tarmuwa",
+    "statename": "Yobe"
+  },
+  "time_series": [
+    {
+      "year_month": "2020-02",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2020-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

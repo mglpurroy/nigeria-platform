@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Achina 2",
+    "wardcode": "ANSAGU02",
+    "lganame": "Aguata",
+    "statename": "Anambra"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

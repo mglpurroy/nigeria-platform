@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Nguru Nwenkwo",
+    "wardcode": "IMSABB13",
+    "lganame": "Aboh-Mbaise",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

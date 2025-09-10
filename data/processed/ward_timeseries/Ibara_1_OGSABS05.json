@@ -1,0 +1,19 @@
+{
+  "ward_info": {
+    "wardname": "Ibara 1",
+    "wardcode": "OGSABS05",
+    "lganame": "Abeokuta South",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-08",
+      "event_count": 3,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 2,
+        "Battles": 1
+      }
+    }
+  ]
+}

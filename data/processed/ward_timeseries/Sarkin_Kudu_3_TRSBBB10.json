@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Sarkin Kudu 3",
+    "wardcode": "TRSBBB10",
+    "lganame": "Ibi",
+    "statename": "Taraba"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-10",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    }
+  ]
+}

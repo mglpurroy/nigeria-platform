@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Iwoye",
+    "wardcode": "OGSION08",
+    "lganame": "Imeko Afon",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-05",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2020-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2024-08",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

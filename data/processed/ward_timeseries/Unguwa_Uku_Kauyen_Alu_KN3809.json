@@ -1,0 +1,42 @@
+{
+  "ward_info": {
+    "wardname": "Unguwa Uku Kauyen Alu",
+    "wardcode": "KN3809",
+    "lganame": "Tarauni",
+    "statename": "Kano"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-11",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2015-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2015-11",
+      "event_count": 1,
+      "total_fatalities": 19,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2024-08",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

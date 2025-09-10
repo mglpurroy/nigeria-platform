@@ -1,0 +1,27 @@
+{
+  "ward_info": {
+    "wardname": "Ibagun",
+    "wardcode": "KWSKEY07",
+    "lganame": "Ilorin East",
+    "statename": "Kwara"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-07",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-11",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Protests": 1
+      }
+    }
+  ]
+}

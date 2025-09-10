@@ -1,0 +1,1342 @@
+{
+  "ward_info": {
+    "wardname": "Atissa 1",
+    "wardcode": "BYSYEN01",
+    "lganame": "Yenegoa",
+    "statename": "Bayelsa"
+  },
+  "time_series": [
+    {
+      "year_month": "1998-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "1998-12",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "1999-01",
+      "event_count": 3,
+      "total_fatalities": 33,
+      "event_type_breakdown": {
+        "Battles": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "1999-04",
+      "event_count": 1,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "1999-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "1999-09",
+      "event_count": 5,
+      "total_fatalities": 29,
+      "event_type_breakdown": {
+        "Battles": 3,
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2001-04",
+      "event_count": 1,
+      "total_fatalities": 20,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2003-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2003-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2004-08",
+      "event_count": 1,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2004-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2005-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2005-08",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2005-11",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 3
+      }
+    },
+    {
+      "year_month": "2006-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2007-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2007-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2007-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2007-06",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2007-07",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2007-09",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2007-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2008-03",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2008-05",
+      "event_count": 2,
+      "total_fatalities": 5,
+      "event_type_breakdown": {
+        "Battles": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2008-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2008-07",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2008-08",
+      "event_count": 3,
+      "total_fatalities": 9,
+      "event_type_breakdown": {
+        "Battles": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2008-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2008-12",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2009-03",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 2
+      }
+    },
+    {
+      "year_month": "2009-04",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2009-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2010-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2010-03",
+      "event_count": 2,
+      "total_fatalities": 7,
+      "event_type_breakdown": {
+        "Battles": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2010-04",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2010-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2010-06",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 2,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2010-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2010-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2010-10",
+      "event_count": 1,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2010-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2011-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2011-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2011-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2012-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2012-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2012-03",
+      "event_count": 2,
+      "total_fatalities": 22,
+      "event_type_breakdown": {
+        "Battles": 2
+      }
+    },
+    {
+      "year_month": "2012-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2012-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2012-08",
+      "event_count": 3,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Battles": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2012-11",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2013-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2013-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2013-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2013-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2013-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2013-11",
+      "event_count": 2,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Battles": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2014-01",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2014-04",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2014-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2014-08",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 3
+      }
+    },
+    {
+      "year_month": "2014-09",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1,
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2014-10",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2014-12",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1,
+        "Battles": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2015-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2015-03",
+      "event_count": 4,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 2,
+        "Explosions/Remote violence": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2015-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2015-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2015-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2015-09",
+      "event_count": 3,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2015-10",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2015-11",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 3
+      }
+    },
+    {
+      "year_month": "2015-12",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2016-02",
+      "event_count": 4,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 3,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2016-04",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 2
+      }
+    },
+    {
+      "year_month": "2016-05",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2016-06",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1,
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2016-07",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2016-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2016-10",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2017-02",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 2
+      }
+    },
+    {
+      "year_month": "2017-04",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2017-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2017-06",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2017-07",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1,
+        "Protests": 1,
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2017-08",
+      "event_count": 4,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Violence against civilians": 1,
+        "Battles": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2017-12",
+      "event_count": 1,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2018-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2018-05",
+      "event_count": 3,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Battles": 2,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2018-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2018-09",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2018-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2019-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2019-02",
+      "event_count": 3,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2019-03",
+      "event_count": 3,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2019-04",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2019-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2019-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2019-08",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2019-09",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2019-10",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 3
+      }
+    },
+    {
+      "year_month": "2019-11",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2019-12",
+      "event_count": 3,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Riots": 2,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2020-01",
+      "event_count": 5,
+      "total_fatalities": 5,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Riots": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2020-02",
+      "event_count": 5,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 4,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2020-03",
+      "event_count": 3,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Battles": 2,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2020-04",
+      "event_count": 4,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Battles": 3,
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2020-05",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2020-06",
+      "event_count": 2,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2020-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2020-08",
+      "event_count": 3,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2020-09",
+      "event_count": 5,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 5
+      }
+    },
+    {
+      "year_month": "2020-10",
+      "event_count": 4,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 4
+      }
+    },
+    {
+      "year_month": "2020-11",
+      "event_count": 3,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 2,
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2020-12",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2021-02",
+      "event_count": 3,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-03",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 3
+      }
+    },
+    {
+      "year_month": "2021-04",
+      "event_count": 3,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2021-05",
+      "event_count": 6,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Protests": 3,
+        "Battles": 1,
+        "Riots": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-07",
+      "event_count": 3,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 2,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2021-08",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2021-09",
+      "event_count": 4,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Battles": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2021-11",
+      "event_count": 3,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-01",
+      "event_count": 4,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 2,
+        "Violence against civilians": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-03",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-04",
+      "event_count": 3,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Battles": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2022-05",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-06",
+      "event_count": 5,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 2,
+        "Battles": 1,
+        "Riots": 1,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-07",
+      "event_count": 3,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Battles": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-08",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-09",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2022-11",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 2
+      }
+    },
+    {
+      "year_month": "2022-12",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2023-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2023-03",
+      "event_count": 5,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 2,
+        "Protests": 2,
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2023-04",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2023-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2023-06",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 2
+      }
+    },
+    {
+      "year_month": "2023-07",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2023-09",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2023-10",
+      "event_count": 3,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 3
+      }
+    },
+    {
+      "year_month": "2023-11",
+      "event_count": 4,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 2,
+        "Strategic developments": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2024-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2024-05",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 2
+      }
+    },
+    {
+      "year_month": "2024-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2024-08",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-09",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2024-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2025-01",
+      "event_count": 3,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Battles": 3
+      }
+    },
+    {
+      "year_month": "2025-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2025-06",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Protests": 1
+      }
+    }
+  ]
+}

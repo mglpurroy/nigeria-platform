@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ikwe / Oniong east 3",
+    "wardcode": "AKSABT06",
+    "lganame": "Onna",
+    "statename": "Akwa Ibom"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

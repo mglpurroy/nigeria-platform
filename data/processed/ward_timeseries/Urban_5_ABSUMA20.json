@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Urban 5",
+    "wardcode": "ABSUMA20",
+    "lganame": "Umuahia North",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

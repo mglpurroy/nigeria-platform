@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Iponri / Olaleye",
+    "wardcode": "LASLMD11",
+    "lganame": "Lagos Mainland",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

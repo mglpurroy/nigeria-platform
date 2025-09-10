@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Kuruwa",
+    "wardcode": "62005",
+    "lganame": "Tureta",
+    "statename": "Sokoto"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-10",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 2
+      }
+    }
+  ]
+}

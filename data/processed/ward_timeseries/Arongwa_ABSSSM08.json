@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Arongwa",
+    "wardcode": "ABSSSM08",
+    "lganame": "Osisioma Ngwa",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

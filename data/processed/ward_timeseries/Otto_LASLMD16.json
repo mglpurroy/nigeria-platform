@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Otto",
+    "wardcode": "LASLMD16",
+    "lganame": "Lagos Mainland",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2014-05",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-08",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

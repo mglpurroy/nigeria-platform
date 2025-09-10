@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Dampar 3",
+    "wardcode": "TRSBBB03",
+    "lganame": "Ibi",
+    "statename": "Taraba"
+  },
+  "time_series": [
+    {
+      "year_month": "2001-05",
+      "event_count": 1,
+      "total_fatalities": 20,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2025-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

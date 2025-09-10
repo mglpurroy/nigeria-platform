@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Usuk Ibahesi / Ikono North 2",
+    "wardcode": "AKSDRK07",
+    "lganame": "Ini",
+    "statename": "Akwa Ibom"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

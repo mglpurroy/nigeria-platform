@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Bashorun",
+    "wardcode": "OYSIBN04",
+    "lganame": "Ibadan North",
+    "statename": "Oyo"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-03",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

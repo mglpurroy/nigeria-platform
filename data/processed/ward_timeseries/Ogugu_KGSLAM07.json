@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Ogugu",
+    "wardcode": "KGSLAM07",
+    "lganame": "Olamaboro",
+    "statename": "Kogi"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-07",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

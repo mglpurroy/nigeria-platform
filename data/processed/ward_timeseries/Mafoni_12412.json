@@ -1,0 +1,35 @@
+{
+  "ward_info": {
+    "wardname": "Mafoni",
+    "wardcode": "12412",
+    "lganame": "Maiduguri",
+    "statename": "Borno"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-11",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2013-03",
+      "event_count": 2,
+      "total_fatalities": 8,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2013-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

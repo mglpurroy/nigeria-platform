@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Nempi",
+    "wardcode": "IMSNGB09",
+    "lganame": "Oru West",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

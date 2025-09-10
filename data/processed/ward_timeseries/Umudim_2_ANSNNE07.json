@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Umudim 2",
+    "wardcode": "ANSNNE07",
+    "lganame": "Nnewi North",
+    "statename": "Anambra"
+  },
+  "time_series": [
+    {
+      "year_month": "2020-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

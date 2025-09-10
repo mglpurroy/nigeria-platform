@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Eji Umu / Egi 1",
+    "wardcode": "RVSRGM05",
+    "lganame": "Ogba/Egbema/Ndoni",
+    "statename": "Rivers"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-06",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-04",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

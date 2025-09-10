@@ -1,0 +1,52 @@
+{
+  "ward_info": {
+    "wardname": "Aktward 11",
+    "wardcode": "RVSABM11",
+    "lganame": "Akuku Toru",
+    "statename": "Rivers"
+  },
+  "time_series": [
+    {
+      "year_month": "2008-09",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2009-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2017-08",
+      "event_count": 10,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 9,
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2019-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2021-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

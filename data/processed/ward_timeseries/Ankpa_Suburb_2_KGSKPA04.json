@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ankpa Suburb 2",
+    "wardcode": "KGSKPA04",
+    "lganame": "Ankpa",
+    "statename": "Kogi"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-01",
+      "event_count": 2,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Mofio",
+    "wardcode": "12306",
+    "lganame": "Monguno",
+    "statename": "Borno"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-08",
+      "event_count": 1,
+      "total_fatalities": 10,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    }
+  ]
+}

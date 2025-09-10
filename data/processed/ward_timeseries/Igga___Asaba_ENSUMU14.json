@@ -1,0 +1,20 @@
+{
+  "ward_info": {
+    "wardname": "Igga / Asaba",
+    "wardcode": "ENSUMU14",
+    "lganame": "Uzo-Uwani",
+    "statename": "Enugu"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-05",
+      "event_count": 3,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Strategic developments": 1,
+        "Violence against civilians": 1,
+        "Battles": 1
+      }
+    }
+  ]
+}

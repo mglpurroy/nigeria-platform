@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Gazari",
+    "wardcode": "43104",
+    "lganame": "Sabuwa",
+    "statename": "Katsina"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-10",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-02",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

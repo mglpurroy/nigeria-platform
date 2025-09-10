@@ -1,0 +1,43 @@
+{
+  "ward_info": {
+    "wardname": "Obward 5",
+    "wardcode": "RVSRUM05",
+    "lganame": "Obio/Akpor",
+    "statename": "Rivers"
+  },
+  "time_series": [
+    {
+      "year_month": "2015-07",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2017-05",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Riots": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2017-10",
+      "event_count": 2,
+      "total_fatalities": 12,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    },
+    {
+      "year_month": "2024-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

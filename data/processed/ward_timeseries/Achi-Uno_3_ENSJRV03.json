@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Achi-Uno 3",
+    "wardcode": "ENSJRV03",
+    "lganame": "Oji-River",
+    "statename": "Enugu"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-11",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2025-04",
+      "event_count": 2,
+      "total_fatalities": 7,
+      "event_type_breakdown": {
+        "Battles": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Abosan",
+    "wardcode": "LASIKU01",
+    "lganame": "Ikorodu",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

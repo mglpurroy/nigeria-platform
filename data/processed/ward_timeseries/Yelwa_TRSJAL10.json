@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Yelwa",
+    "wardcode": "TRSJAL10",
+    "lganame": "Jalingo",
+    "statename": "Taraba"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-05",
+      "event_count": 3,
+      "total_fatalities": 11,
+      "event_type_breakdown": {
+        "Violence against civilians": 3
+      }
+    },
+    {
+      "year_month": "2019-07",
+      "event_count": 1,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

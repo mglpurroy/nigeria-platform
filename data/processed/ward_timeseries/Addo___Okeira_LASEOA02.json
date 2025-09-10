@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Addo / Okeira",
+    "wardcode": "LASEOA02",
+    "lganame": "Eti Osa",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2017-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2023-09",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

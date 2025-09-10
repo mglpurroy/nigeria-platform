@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Diamond / Five",
+    "wardcode": "CRSCAL05",
+    "lganame": "Calabar Municipal",
+    "statename": "Cross River"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

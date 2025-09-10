@@ -1,0 +1,42 @@
+{
+  "ward_info": {
+    "wardname": "Ohunbe",
+    "wardcode": "OGSYEN10",
+    "lganame": "Yewa North",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2017-01",
+      "event_count": 1,
+      "total_fatalities": 6,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-09",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2022-09",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

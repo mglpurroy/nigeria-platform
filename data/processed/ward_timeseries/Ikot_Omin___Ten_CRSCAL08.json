@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ikot Omin / Ten",
+    "wardcode": "CRSCAL08",
+    "lganame": "Calabar Municipal",
+    "statename": "Cross River"
+  },
+  "time_series": [
+    {
+      "year_month": "2013-10",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

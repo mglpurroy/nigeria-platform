@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Iba 2 / 2",
+    "wardcode": "OSSIDN06",
+    "lganame": "Ifelodun",
+    "statename": "Osun"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-09",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-10",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

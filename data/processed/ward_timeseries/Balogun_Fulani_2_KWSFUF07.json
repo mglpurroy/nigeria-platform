@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Balogun Fulani 2",
+    "wardcode": "KWSFUF07",
+    "lganame": "Ilorin South",
+    "statename": "Kwara"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-04",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-05",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

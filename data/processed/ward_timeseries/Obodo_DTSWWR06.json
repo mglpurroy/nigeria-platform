@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Obodo",
+    "wardcode": "DTSWWR06",
+    "lganame": "Warri South",
+    "statename": "Delta"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-04",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ward_info": {
+    "wardname": "Iperu 2",
+    "wardcode": "OGSIKE06",
+    "lganame": "Ikenne",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-10",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2022-11",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2024-01",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1,
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

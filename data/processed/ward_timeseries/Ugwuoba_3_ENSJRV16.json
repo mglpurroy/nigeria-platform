@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ugwuoba 3",
+    "wardcode": "ENSJRV16",
+    "lganame": "Oji-River",
+    "statename": "Enugu"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-07",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

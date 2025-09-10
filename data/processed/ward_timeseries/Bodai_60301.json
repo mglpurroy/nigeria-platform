@@ -1,0 +1,27 @@
+{
+  "ward_info": {
+    "wardname": "Bodai",
+    "wardcode": "60301",
+    "lganame": "Dange Shuni",
+    "statename": "Sokoto"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-09",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1,
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

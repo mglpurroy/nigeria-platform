@@ -1,0 +1,17 @@
+{
+  "state": {
+    "level": "state",
+    "total_units": 37,
+    "total_population": 206043333.0,
+    "file": "data/processed/nigeria_state_population.json"
+  },
+  "lga": {
+    "level": "lga",
+    "total_units": 774,
+    "total_population": 205996665.38867188,
+    "file": "data/processed/nigeria_lga_population.json"
+  },
+  "ward": {
+    "error": "'NoneType' object has no attribute '__geo_interface__'"
+  }
+}

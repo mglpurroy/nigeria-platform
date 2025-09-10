@@ -1,0 +1,43 @@
+{
+  "ward_info": {
+    "wardname": "Imabana 2 / 2",
+    "wardcode": "CRSTGD01",
+    "lganame": "Abi",
+    "statename": "Cross River"
+  },
+  "time_series": [
+    {
+      "year_month": "2013-01",
+      "event_count": 3,
+      "total_fatalities": 17,
+      "event_type_breakdown": {
+        "Battles": 2,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2013-03",
+      "event_count": 1,
+      "total_fatalities": 7,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2016-12",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2017-11",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

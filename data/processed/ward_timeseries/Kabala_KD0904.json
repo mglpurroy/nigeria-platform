@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Kabala",
+    "wardcode": "KD0904",
+    "lganame": "Kaduna North",
+    "statename": "Kaduna"
+  },
+  "time_series": [
+    {
+      "year_month": "2011-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2012-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

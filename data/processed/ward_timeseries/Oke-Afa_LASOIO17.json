@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Oke-Afa",
+    "wardcode": "LASOIO17",
+    "lganame": "Oshodi/Isolo",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2016-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

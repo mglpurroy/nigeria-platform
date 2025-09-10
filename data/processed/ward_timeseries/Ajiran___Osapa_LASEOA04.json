@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ajiran / Osapa",
+    "wardcode": "LASEOA04",
+    "lganame": "Eti Osa",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "ward_info": {
+    "wardname": "Abiokula 1 and 2",
+    "wardcode": "EDSABD06",
+    "lganame": "Orhionmwon",
+    "statename": "Edo"
+  },
+  "time_series": [
+    {
+      "year_month": "2005-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2019-11",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Strategic developments": 1,
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

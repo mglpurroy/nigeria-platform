@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Ezeleke",
+    "wardcode": "ABSAPR05",
+    "lganame": "Umuahia South",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-01",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Alesinloye",
+    "wardcode": "OYSISW02",
+    "lganame": "Ibadan South West",
+    "statename": "Oyo"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2024-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

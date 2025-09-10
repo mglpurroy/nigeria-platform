@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Gobirawa",
+    "wardcode": "KN0705",
+    "lganame": "Dala",
+    "statename": "Kano"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-08",
+      "event_count": 1,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

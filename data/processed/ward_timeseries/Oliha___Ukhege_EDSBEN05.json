@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Oliha / Ukhege",
+    "wardcode": "EDSBEN05",
+    "lganame": "Oredo",
+    "statename": "Edo"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "ward_info": {
+    "wardname": "Okpuno",
+    "wardcode": "ANSAWK19",
+    "lganame": "Awka South",
+    "statename": "Anambra"
+  },
+  "time_series": [
+    {
+      "year_month": "2020-05",
+      "event_count": 4,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 4
+      }
+    },
+    {
+      "year_month": "2021-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2022-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-01",
+      "event_count": 1,
+      "total_fatalities": 4,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2023-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2024-10",
+      "event_count": 1,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2025-06",
+      "event_count": 3,
+      "total_fatalities": 2,
+      "event_type_breakdown": {
+        "Violence against civilians": 2,
+        "Riots": 1
+      }
+    }
+  ]
+}

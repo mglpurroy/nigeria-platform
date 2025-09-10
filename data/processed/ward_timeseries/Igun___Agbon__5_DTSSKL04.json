@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Igun / Agbon  5",
+    "wardcode": "DTSSKL04",
+    "lganame": "Ethiope East",
+    "statename": "Delta"
+  },
+  "time_series": [
+    {
+      "year_month": "2017-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Muslim",
+    "wardcode": "OYSOYE07",
+    "lganame": "Oluyole",
+    "statename": "Oyo"
+  },
+  "time_series": [
+    {
+      "year_month": "2016-11",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

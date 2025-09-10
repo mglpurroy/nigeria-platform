@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ezinifite 3",
+    "wardcode": "ANSUKP10",
+    "lganame": "Nnewi South",
+    "statename": "Anambra"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

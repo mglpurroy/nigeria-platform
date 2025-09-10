@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Okwe",
+    "wardcode": "DTSASB05",
+    "lganame": "Oshimili South",
+    "statename": "Delta"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-01",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

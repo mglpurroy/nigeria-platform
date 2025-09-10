@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ezinifite 2",
+    "wardcode": "ANSAGU09",
+    "lganame": "Aguata",
+    "statename": "Anambra"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

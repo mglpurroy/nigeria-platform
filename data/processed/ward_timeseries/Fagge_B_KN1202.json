@@ -1,0 +1,51 @@
+{
+  "ward_info": {
+    "wardname": "Fagge B",
+    "wardcode": "KN1202",
+    "lganame": "Fagge",
+    "statename": "Kano"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Explosions/Remote violence": 1
+      }
+    },
+    {
+      "year_month": "2023-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2023-11",
+      "event_count": 2,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-06",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2025-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    }
+  ]
+}

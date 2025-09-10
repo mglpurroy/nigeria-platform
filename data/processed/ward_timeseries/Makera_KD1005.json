@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Makera",
+    "wardcode": "KD1005",
+    "lganame": "Kaduna South",
+    "statename": "Kaduna"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-08",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

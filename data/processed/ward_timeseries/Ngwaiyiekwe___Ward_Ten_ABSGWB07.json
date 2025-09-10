@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ngwaiyiekwe / Ward Ten",
+    "wardcode": "ABSGWB07",
+    "lganame": "Ugwunagbo",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    }
+  ]
+}

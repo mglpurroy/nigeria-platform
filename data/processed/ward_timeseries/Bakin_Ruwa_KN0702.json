@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Bakin Ruwa",
+    "wardcode": "KN0702",
+    "lganame": "Dala",
+    "statename": "Kano"
+  },
+  "time_series": [
+    {
+      "year_month": "2023-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    },
+    {
+      "year_month": "2023-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2024-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

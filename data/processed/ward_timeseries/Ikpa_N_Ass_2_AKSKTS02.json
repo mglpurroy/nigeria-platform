@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ikpa N Ass 2",
+    "wardcode": "AKSKTS02",
+    "lganame": "Ikot Abasi",
+    "statename": "Akwa Ibom"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

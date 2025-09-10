@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Minibie",
+    "wardcode": "BYSBRS06",
+    "lganame": "Brass",
+    "statename": "Bayelsa"
+  },
+  "time_series": [
+    {
+      "year_month": "2013-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2017-12",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2021-11",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ward_info": {
+    "wardname": "Aiyetoro / Agirigbon 2",
+    "wardcode": "KGSJMU02",
+    "lganame": "Ijumu",
+    "statename": "Kogi"
+  },
+  "time_series": [
+    {
+      "year_month": "2017-04",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2019-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2019-11",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

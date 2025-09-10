@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ekwe 2 / Ebenator",
+    "wardcode": "IMSUMD07",
+    "lganame": "Isu",
+    "statename": "Imo"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-01",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

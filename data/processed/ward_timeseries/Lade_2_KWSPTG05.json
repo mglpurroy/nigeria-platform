@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Lade 2",
+    "wardcode": "KWSPTG05",
+    "lganame": "Pategi",
+    "statename": "Kwara"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-06",
+      "event_count": 3,
+      "total_fatalities": 3,
+      "event_type_breakdown": {
+        "Violence against civilians": 3
+      }
+    },
+    {
+      "year_month": "2025-07",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Strategic developments": 1
+      }
+    }
+  ]
+}

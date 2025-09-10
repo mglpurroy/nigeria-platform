@@ -1,0 +1,29 @@
+{
+  "ward_info": {
+    "wardname": "Bajoga West",
+    "wardcode": "GMSFKY04",
+    "lganame": "Funakaye",
+    "statename": "Gombe"
+  },
+  "time_series": [
+    {
+      "year_month": "2012-04",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1,
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2014-12",
+      "event_count": 3,
+      "total_fatalities": 71,
+      "event_type_breakdown": {
+        "Strategic developments": 1,
+        "Explosions/Remote violence": 1,
+        "Battles": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Ahiaukwu A / Amangwu",
+    "wardcode": "ABSAPR01",
+    "lganame": "Umuahia South",
+    "statename": "Abia"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    }
+  ]
+}

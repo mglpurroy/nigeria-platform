@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Ideani",
+    "wardcode": "ANSGDD04",
+    "lganame": "Idemili North",
+    "statename": "Anambra"
+  },
+  "time_series": [
+    {
+      "year_month": "2013-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1
+      }
+    },
+    {
+      "year_month": "2013-11",
+      "event_count": 1,
+      "total_fatalities": 24,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

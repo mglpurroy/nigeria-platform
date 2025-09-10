@@ -1,0 +1,27 @@
+{
+  "ward_info": {
+    "wardname": "Akiode",
+    "wardcode": "LASIKA02",
+    "lganame": "Ikeja",
+    "statename": "Lagos"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-04",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Riots": 1
+      }
+    },
+    {
+      "year_month": "2023-03",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Protests": 1,
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

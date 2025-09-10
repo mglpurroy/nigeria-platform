@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Adeti",
+    "wardcode": "OSSIEW01",
+    "lganame": "Ilesha West",
+    "statename": "Osun"
+  },
+  "time_series": [
+    {
+      "year_month": "2022-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2025-02",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "ward_info": {
+    "wardname": "Lafiagi 3",
+    "wardcode": "KWSLAF03",
+    "lganame": "Edu",
+    "statename": "Kwara"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-05",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    },
+    {
+      "year_month": "2025-07",
+      "event_count": 2,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 2
+      }
+    }
+  ]
+}

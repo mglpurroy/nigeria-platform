@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Kpada 2",
+    "wardcode": "KWSPTG02",
+    "lganame": "Pategi",
+    "statename": "Kwara"
+  },
+  "time_series": [
+    {
+      "year_month": "2021-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

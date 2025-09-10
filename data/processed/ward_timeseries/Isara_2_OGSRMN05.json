@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Isara 2",
+    "wardcode": "OGSRMN05",
+    "lganame": "Remo North",
+    "statename": "Ogun"
+  },
+  "time_series": [
+    {
+      "year_month": "2025-01",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

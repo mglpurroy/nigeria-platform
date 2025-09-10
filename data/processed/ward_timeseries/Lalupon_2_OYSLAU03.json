@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Lalupon 2",
+    "wardcode": "OYSLAU03",
+    "lganame": "Lagelu",
+    "statename": "Oyo"
+  },
+  "time_series": [
+    {
+      "year_month": "2010-03",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

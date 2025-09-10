@@ -1,0 +1,34 @@
+{
+  "ward_info": {
+    "wardname": "Kakumi",
+    "wardcode": "40108",
+    "lganame": "Bakori",
+    "statename": "Katsina"
+  },
+  "time_series": [
+    {
+      "year_month": "2024-12",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2025-03",
+      "event_count": 1,
+      "total_fatalities": 0,
+      "event_type_breakdown": {
+        "Battles": 1
+      }
+    },
+    {
+      "year_month": "2025-05",
+      "event_count": 1,
+      "total_fatalities": 1,
+      "event_type_breakdown": {
+        "Violence against civilians": 1
+      }
+    }
+  ]
+}

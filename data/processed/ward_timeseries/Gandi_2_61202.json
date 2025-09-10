@@ -1,0 +1,18 @@
+{
+  "ward_info": {
+    "wardname": "Gandi 2",
+    "wardcode": "61202",
+    "lganame": "Rabah",
+    "statename": "Sokoto"
+  },
+  "time_series": [
+    {
+      "year_month": "2019-01",
+      "event_count": 3,
+      "total_fatalities": 25,
+      "event_type_breakdown": {
+        "Violence against civilians": 3
+      }
+    }
+  ]
+}
