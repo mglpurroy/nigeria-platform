@@ -758,12 +758,16 @@ def create_static_timeseries_charts(ward_data, output_dir="data/processed/static
     df['date'] = pd.to_datetime(df['year_month'], format='%Y-%m')
     df = df.sort_values('date')
     
-    # Create figure with subplots
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10))
+    # Create figure with subplots - 2x2 grid to include violence analysis
+    fig = plt.figure(figsize=(16, 12))
     fig.suptitle(f"Violence Analysis - {ward_info['wardname']}\n{ward_info['lganame']}, {ward_info['statename']}", 
                  fontsize=16, fontweight='bold')
     
-    # Plot 1: Event Count
+    # Create 2x2 grid: time series charts on left, violence analysis on right
+    gs = fig.add_gridspec(2, 2, hspace=0.3, wspace=0.3)
+    
+    # Plot 1: Event Count (top left)
+    ax1 = fig.add_subplot(gs[0, 0])
     ax1.bar(df['date'], df['event_count'], color='#1f77b4', alpha=0.7, width=20)
     ax1.set_title('Event Count Over Time', fontsize=14, fontweight='bold')
     ax1.set_ylabel('Number of Events', fontsize=12)
@@ -772,7 +776,8 @@ def create_static_timeseries_charts(ward_data, output_dir="data/processed/static
     ax1.xaxis.set_major_locator(mdates.YearLocator())
     plt.setp(ax1.xaxis.get_majorticklabels(), rotation=45)
     
-    # Plot 2: Total Fatalities
+    # Plot 2: Total Fatalities (bottom left)
+    ax2 = fig.add_subplot(gs[1, 0])
     ax2.bar(df['date'], df['total_fatalities'], color='#d62728', alpha=0.7, width=20)
     ax2.set_title('Total Fatalities Over Time', fontsize=14, fontweight='bold')
     ax2.set_ylabel('Number of Fatalities', fontsize=12)
@@ -782,14 +787,65 @@ def create_static_timeseries_charts(ward_data, output_dir="data/processed/static
     ax2.xaxis.set_major_locator(mdates.YearLocator())
     plt.setp(ax2.xaxis.get_majorticklabels(), rotation=45)
     
-    # Add summary statistics
-    total_events = df['event_count'].sum()
-    total_fatalities = df['total_fatalities'].sum()
-    date_range = f"{df['date'].min().strftime('%Y-%m')} to {df['date'].max().strftime('%Y-%m')}"
+    # Violence Analysis Panel (right side)
+    ax3 = fig.add_subplot(gs[:, 1])  # Span both rows on the right
     
-    # Add text box with summary
-    summary_text = f"Summary:\nTotal Events: {total_events:,}\nTotal Fatalities: {total_fatalities:,}\nPeriod: {date_range}"
-    fig.text(0.02, 0.02, summary_text, fontsize=10, bbox=dict(boxstyle="round,pad=0.3", facecolor="lightgray", alpha=0.8))
+    # Get violence type breakdown
+    event_types, actors = analyze_violence_types_and_actors(ward_data)
+    
+    if event_types:
+        # Create violence type breakdown
+        event_type_names = [et[0] for et in event_types]
+        event_type_counts = [et[1] for et in event_types]
+        total_events = sum(event_type_counts)
+        
+        # Create pie chart for event types
+        colors = plt.cm.Set3(range(len(event_types)))
+        wedges, texts, autotexts = ax3.pie(event_type_counts, labels=event_type_names, 
+                                           autopct='%1.1f%%', colors=colors, startangle=90)
+        ax3.set_title('Violence Event Types', fontsize=14, fontweight='bold')
+        
+        # Add summary statistics
+        total_fatalities = df['total_fatalities'].sum()
+        date_range = f"{df['date'].min().strftime('%Y-%m')} to {df['date'].max().strftime('%Y-%m')}"
+        
+        # Add text box with summary
+        summary_text = f"""Summary Statistics:
+Total Events: {total_events:,}
+Total Fatalities: {total_fatalities:,}
+Period: {date_range}
+
+Top Event Types:"""
+        
+        # Add top event types to summary
+        for i, (event_type, count) in enumerate(event_types[:3]):
+            percentage = (count / total_events * 100) if total_events > 0 else 0
+            summary_text += f"\n{i+1}. {event_type}: {count} ({percentage:.1f}%)"
+        
+        fig.text(0.02, 0.02, summary_text, fontsize=10, 
+                bbox=dict(boxstyle="round,pad=0.3", facecolor="lightblue", alpha=0.8))
+    else:
+        # No violence data
+        ax3.text(0.5, 0.5, 'No Violence Data\nAvailable', 
+                ha='center', va='center', fontsize=16, 
+                bbox=dict(boxstyle="round,pad=0.3", facecolor="lightgray", alpha=0.8))
+        ax3.set_title('Violence Analysis', fontsize=14, fontweight='bold')
+        ax3.axis('off')
+        
+        # Add basic summary
+        total_events = df['event_count'].sum()
+        total_fatalities = df['total_fatalities'].sum()
+        date_range = f"{df['date'].min().strftime('%Y-%m')} to {df['date'].max().strftime('%Y-%m')}"
+        
+        summary_text = f"""Summary Statistics:
+Total Events: {total_events:,}
+Total Fatalities: {total_fatalities:,}
+Period: {date_range}
+
+Status: No Violence Data Reported"""
+        
+        fig.text(0.02, 0.02, summary_text, fontsize=10, 
+                bbox=dict(boxstyle="round,pad=0.3", facecolor="lightgray", alpha=0.8))
     
     plt.tight_layout()
     
@@ -1351,188 +1407,52 @@ def main():
         if selected_ward_display:
             selected_ward_code = ward_options[ward_options['display_name'] == selected_ward_display]['ADM3_PCODE'].iloc[0]
             
-            # Check if we already have this ward's data cached
-            cache_key = f"ward_data_{selected_ward_code}_{period_info['start_year']}_{period_info['start_month']}_{period_info['end_year']}_{period_info['end_month']}"
+            # Get ward info from the merged data
+            ward_info = merged[merged['ADM3_PCODE'] == selected_ward_code].iloc[0]
             
-            if cache_key not in st.session_state:
-                with st.spinner(f"Loading analysis for {selected_ward_display}..."):
-                    ward_timeseries_data = get_ward_timeseries_data(selected_ward_code, period_info)
-                    if ward_timeseries_data:
-                        st.session_state[cache_key] = ward_timeseries_data
-            else:
-                ward_timeseries_data = st.session_state[cache_key]
+            # Display ward info
+            st.markdown(f"""
+            **Selected Ward:** {ward_info['ADM3_EN']}  
+            **LGA:** {ward_info['ADM2_EN']}  
+            **State:** {ward_info['ADM1_EN']}  
+            **Ward Code:** {ward_info['ADM3_PCODE']}
+            """)
+            
+            # Simple logic: check if static chart exists
+            ward_name_clean = ward_info['ADM3_EN'].replace(' ', '_').replace('/', '_')
+            png_path = f"data/processed/static_charts/{ward_name_clean}_{ward_info['ADM3_PCODE']}_timeseries.png"
+            pdf_path = f"data/processed/static_charts/{ward_name_clean}_{ward_info['ADM3_PCODE']}_timeseries.pdf"
+            
+            if os.path.exists(png_path):
+                # Show the static chart (includes both time series and violence analysis)
+                st.image(png_path, caption=f"Complete Violence Analysis - {ward_info['ADM3_EN']}", use_column_width=True)
                 
-                if ward_timeseries_data:
-                    # Display ward info
-                    ward_info = ward_timeseries_data['ward_info']
-                    st.markdown(f"""
-                    **Selected Ward:** {ward_info['wardname']}  
-                    **LGA:** {ward_info['lganame']}  
-                    **State:** {ward_info['statename']}  
-                    **Ward Code:** {ward_info['wardcode']}
-                    """)
-                    
-                    # Create two columns for time series and analysis
-                    col1, col2 = st.columns([2, 1])
-                    
-                    with col1:
-                        st.subheader("📈 Time Series Analysis")
-                        
-                        # Check if ward has violence data
-                        time_series = ward_timeseries_data.get('time_series', [])
-                        
-                        if not time_series or all(item['event_count'] == 0 and item['total_fatalities'] == 0 for item in time_series):
-                            # No violence data
-                            st.info("📊 **No violence data reported** for this ward during the selected period.")
-                            
-                            # Show basic ward information
-                            col1_1, col1_2, col1_3 = st.columns(3)
-                            with col1_1:
-                                st.metric("Total Events", "0")
-                            with col1_2:
-                                st.metric("Total Fatalities", "0")
-                            with col1_3:
-                                st.metric("Status", "No Violence")
-                        else:
-                            # Has violence data - load pre-generated static charts instantly
-                            try:
-                                # Try to load pre-generated static chart
-                                ward_name_clean = ward_info['wardname'].replace(' ', '_').replace('/', '_')
-                                png_path = f"data/processed/static_charts/{ward_name_clean}_{ward_info['wardcode']}_timeseries.png"
-                                pdf_path = f"data/processed/static_charts/{ward_name_clean}_{ward_info['wardcode']}_timeseries.pdf"
-                                
-                                if os.path.exists(png_path):
-                                    # Display the pre-generated PNG image instantly
-                                    st.image(png_path, caption=f"Time Series Analysis - {ward_info['wardname']}", use_column_width=True)
-                                    
-                                    # Display summary statistics
-                                    total_events = sum(item['event_count'] for item in time_series)
-                                    total_fatalities = sum(item['total_fatalities'] for item in time_series)
-                                    date_range = f"{time_series[0]['year_month']} to {time_series[-1]['year_month']}"
-                                    
-                                    col1_1, col1_2, col1_3 = st.columns(3)
-                                    with col1_1:
-                                        st.metric("Total Events", f"{total_events:,}")
-                                    with col1_2:
-                                        st.metric("Total Fatalities", f"{total_fatalities:,}")
-                                    with col1_3:
-                                        st.metric("Date Range", date_range)
-                                    
-                                    # Download buttons for static charts
-                                    st.markdown("**📥 Download Charts:**")
-                                    col_dl1, col_dl2 = st.columns(2)
-                                    
-                                    with col_dl1:
-                                        with open(png_path, "rb") as file:
-                                            st.download_button(
-                                                label="📊 Download PNG",
-                                                data=file.read(),
-                                                file_name=f"{ward_info['wardname'].replace(' ', '_')}_timeseries.png",
-                                                mime="image/png",
-                                                use_container_width=True
-                                            )
-                                    
-                                    with col_dl2:
-                                        with open(pdf_path, "rb") as file:
-                                            st.download_button(
-                                                label="📄 Download PDF",
-                                                data=file.read(),
-                                                file_name=f"{ward_info['wardname'].replace(' ', '_')}_timeseries.pdf",
-                                                mime="application/pdf",
-                                                use_container_width=True
-                                            )
-                                else:
-                                    # Fallback: generate chart on demand
-                                    png_path, pdf_path = create_static_timeseries_charts(ward_timeseries_data)
-                                    if png_path and pdf_path:
-                                        st.image(png_path, caption=f"Time Series Analysis - {ward_info['wardname']}", use_column_width=True)
-                                    else:
-                                        st.error("Failed to generate static charts.")
-                            except Exception as e:
-                                st.error(f"Error loading static charts: {str(e)}")
-                        
-                        # Commented out dynamic Plotly charts to avoid Arrow serialization issues
-                        # timeseries_fig = create_ward_timeseries_plot(ward_timeseries_data)
-                        # if timeseries_fig:
-                        #     st.plotly_chart(timeseries_fig, use_container_width=True)
-                    
-                    with col2:
-                        st.subheader("🎯 Violence Analysis")
-                        
-                        # Display violence type breakdown as text and table (avoiding matplotlib issues)
-                        time_series = ward_timeseries_data.get('time_series', [])
-                        
-                        if not time_series or all(item['event_count'] == 0 and item['total_fatalities'] == 0 for item in time_series):
-                            # No violence data
-                            st.info("📊 **No violence data reported** for this ward during the selected period.")
-                            
-                            # Show basic metrics
-                            col2_1, col2_2 = st.columns(2)
-                            with col2_1:
-                                st.metric("Event Types", "None")
-                            with col2_2:
-                                st.metric("Risk Level", "Low")
-                        else:
-                            # Has violence data
-                            event_types, actors = analyze_violence_types_and_actors(ward_timeseries_data)
-                            if event_types:
-                                st.markdown("**Violence Event Types:**")
-                                
-                                # Create a simple table display
-                                event_data = []
-                                total_events = sum(count for _, count in event_types)
-                                
-                                for event_type, count in event_types:
-                                    percentage = (count / total_events * 100) if total_events > 0 else 0
-                                    event_data.append({
-                                        'Event Type': event_type,
-                                        'Count': count,
-                                        'Percentage': f"{percentage:.1f}%"
-                                    })
-                                
-                                # Display event types as a simple table to avoid Arrow serialization issues
-                                for i, (event_type, count, percentage) in enumerate(zip([item['Event Type'] for item in event_data], 
-                                                                                      [item['Count'] for item in event_data], 
-                                                                                      [item['Percentage'] for item in event_data])):
-                                    col_a, col_b, col_c = st.columns([2, 1, 1])
-                                    with col_a:
-                                        st.write(f"**{event_type}**")
-                                    with col_b:
-                                        st.write(f"{count}")
-                                    with col_c:
-                                        st.write(f"{percentage}")
-                                
-                                # Display top event types as metrics
-                                if len(event_types) > 0:
-                                    st.markdown("**Top Event Types:**")
-                                    col2_1, col2_2 = st.columns(2)
-                                    
-                                    with col2_1:
-                                        st.metric(
-                                            f"1. {event_types[0][0]}", 
-                                            f"{event_types[0][1]} events",
-                                            f"{(event_types[0][1]/total_events*100):.1f}%"
-                                        )
-                                    
-                                    with col2_2:
-                                        if len(event_types) > 1:
-                                            st.metric(
-                                                f"2. {event_types[1][0]}", 
-                                                f"{event_types[1][1]} events",
-                                                f"{(event_types[1][1]/total_events*100):.1f}%"
-                                            )
-                            else:
-                                st.info("No violence type data available for this ward.")
-                        
-                        # Commented out matplotlib charts to avoid serialization issues
-                        # analysis_result = create_violence_analysis_panel(ward_timeseries_data)
-                        # if analysis_result:
-                        #     analysis_fig, event_type_df = analysis_result
-                        #     st.pyplot(analysis_fig)
-                    
-                    # Static charts are displayed automatically above
-                else:
-                    st.warning(f"No time series data found for ward {selected_ward_code}")
+                # Download buttons
+                st.markdown("**📥 Download Charts:**")
+                col_dl1, col_dl2 = st.columns(2)
+                
+                with col_dl1:
+                    with open(png_path, "rb") as file:
+                        st.download_button(
+                            label="📊 Download PNG",
+                            data=file.read(),
+                            file_name=f"{ward_info['ADM3_EN'].replace(' ', '_')}_violence_analysis.png",
+                            mime="image/png",
+                            use_container_width=True
+                        )
+                
+                with col_dl2:
+                    with open(pdf_path, "rb") as file:
+                        st.download_button(
+                            label="📄 Download PDF",
+                            data=file.read(),
+                            file_name=f"{ward_info['ADM3_EN'].replace(' ', '_')}_violence_analysis.pdf",
+                            mime="application/pdf",
+                            use_container_width=True
+                        )
+            else:
+                # No chart exists - show no violence data message
+                st.info("📊 **No violence data reported** for this ward during the selected period.")
     else:
         st.error("No ward data available for analysis.")
     
