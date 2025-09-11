@@ -154,11 +154,15 @@ def create_ward_map(ward_data, boundaries, period_info, rate_thresh, abs_thresh)
     
     # Merge with classification data using optimized merge
     # Ward boundaries use 'wardcode' column, ward data uses 'ADM3_PCODE'
-    merge_cols = ['ADM3_PCODE', 'violence_affected', 'ACLED_BRD_total', 'acled_total_death_rate']
+    merge_cols = ['ADM3_PCODE', 'ADM3_EN', 'ADM2_EN', 'ADM1_EN', 'pop_count', 'violence_affected', 'ACLED_BRD_total', 'acled_total_death_rate']
     merged_ward = ward_gdf.merge(ward_data[merge_cols], left_on='wardcode', right_on='ADM3_PCODE', how='left')
     
     # Use vectorized fillna
     fill_values = {
+        'ADM3_EN': 'Unknown',
+        'ADM2_EN': 'Unknown', 
+        'ADM1_EN': 'Unknown',
+        'pop_count': 0,
         'violence_affected': False, 
         'ACLED_BRD_total': 0,
         'acled_total_death_rate': 0
@@ -195,16 +199,24 @@ def create_ward_map(ward_data, boundaries, period_info, rate_thresh, abs_thresh)
             
         color, opacity, status = get_ward_color_status(row)
         
-        # Simplified popup content for better performance
+        # Enhanced popup content with comprehensive ward statistics
         popup_content = f"""
-        <div style="width: 250px; font-family: Arial, sans-serif;">
-            <h4 style="color: {color}; margin: 0;">{row.get('wardname', 'Unknown')}</h4>
-            <div style="background: {color}; color: white; padding: 3px; border-radius: 2px; text-align: center; margin: 5px 0;">
+        <div style="width: 280px; font-family: Arial, sans-serif; line-height: 1.4;">
+            <h4 style="color: {color}; margin: 0 0 8px 0; font-size: 14px;">{row.get('ADM3_EN', 'Unknown Ward')}</h4>
+            <div style="background: {color}; color: white; padding: 4px; border-radius: 3px; text-align: center; margin: 5px 0; font-size: 11px;">
                 <strong>{status}</strong>
             </div>
-            <p><strong>LGA:</strong> {row.get('lganame', 'Unknown')}</p>
-            <p><strong>Deaths:</strong> {row['ACLED_BRD_total']:,.0f}</p>
-            <p><strong>Rate:</strong> {row['acled_total_death_rate']:.1f}/100k</p>
+            <div style="background: #f8f9fa; padding: 8px; border-radius: 4px; margin: 5px 0;">
+                <p style="margin: 2px 0; font-size: 12px;"><strong>📍 State:</strong> {row.get('ADM1_EN', 'Unknown')}</p>
+                <p style="margin: 2px 0; font-size: 12px;"><strong>🏛️ LGA:</strong> {row.get('ADM2_EN', 'Unknown')}</p>
+                <p style="margin: 2px 0; font-size: 12px;"><strong>🏘️ Ward:</strong> {row.get('ADM3_EN', 'Unknown')}</p>
+            </div>
+            <div style="background: #fff3cd; padding: 8px; border-radius: 4px; margin: 5px 0;">
+                <p style="margin: 2px 0; font-size: 12px;"><strong>💀 BRD:</strong> {row['ACLED_BRD_total']:,.0f} deaths</p>
+                <p style="margin: 2px 0; font-size: 12px;"><strong>📊 Rate:</strong> {row['acled_total_death_rate']:.1f} per 100k</p>
+                <p style="margin: 2px 0; font-size: 12px;"><strong>👥 Population:</strong> {row['pop_count']:,.0f}</p>
+            </div>
+            <p style="color: #666; font-size: 10px; margin: 5px 0 0 0; text-align: center;">Click to view time series analysis</p>
         </div>
         """
         

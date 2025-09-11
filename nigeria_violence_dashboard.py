@@ -627,8 +627,10 @@ def get_ward_timeseries_data(ward_code, period_info=None):
             end_month = period_info['end_month']
             
             for item in data['time_series']:
-                item_year = item['year']
-                item_month = item['month']
+                # Parse year_month string (format: "YYYY-MM")
+                year_month_str = item['year_month']
+                item_year = int(year_month_str.split('-')[0])
+                item_month = int(year_month_str.split('-')[1])
                 
                 # Check if the item falls within the selected date range
                 if (start_year < item_year < end_year) or \
@@ -731,6 +733,276 @@ def create_ward_timeseries_plot(ward_data):
     )
     
     return fig
+
+def create_static_timeseries_charts(ward_data, output_dir="data/processed/static_charts"):
+    """Create static PNG/PDF charts for ward time series data"""
+    import matplotlib.pyplot as plt
+    import matplotlib.dates as mdates
+    from pathlib import Path
+    import os
+    
+    # Create output directory
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    
+    if not ward_data or 'time_series' not in ward_data:
+        return None
+    
+    time_series = ward_data['time_series']
+    ward_info = ward_data['ward_info']
+    
+    if not time_series:
+        return None
+    
+    # Convert to DataFrame
+    df = pd.DataFrame(time_series)
+    df['date'] = pd.to_datetime(df['year_month'], format='%Y-%m')
+    df = df.sort_values('date')
+    
+    # Create figure with subplots
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10))
+    fig.suptitle(f"Violence Analysis - {ward_info['wardname']}\n{ward_info['lganame']}, {ward_info['statename']}", 
+                 fontsize=16, fontweight='bold')
+    
+    # Plot 1: Event Count
+    ax1.bar(df['date'], df['event_count'], color='#1f77b4', alpha=0.7, width=20)
+    ax1.set_title('Event Count Over Time', fontsize=14, fontweight='bold')
+    ax1.set_ylabel('Number of Events', fontsize=12)
+    ax1.grid(True, alpha=0.3)
+    ax1.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
+    ax1.xaxis.set_major_locator(mdates.YearLocator())
+    plt.setp(ax1.xaxis.get_majorticklabels(), rotation=45)
+    
+    # Plot 2: Total Fatalities
+    ax2.bar(df['date'], df['total_fatalities'], color='#d62728', alpha=0.7, width=20)
+    ax2.set_title('Total Fatalities Over Time', fontsize=14, fontweight='bold')
+    ax2.set_ylabel('Number of Fatalities', fontsize=12)
+    ax2.set_xlabel('Date', fontsize=12)
+    ax2.grid(True, alpha=0.3)
+    ax2.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
+    ax2.xaxis.set_major_locator(mdates.YearLocator())
+    plt.setp(ax2.xaxis.get_majorticklabels(), rotation=45)
+    
+    # Add summary statistics
+    total_events = df['event_count'].sum()
+    total_fatalities = df['total_fatalities'].sum()
+    date_range = f"{df['date'].min().strftime('%Y-%m')} to {df['date'].max().strftime('%Y-%m')}"
+    
+    # Add text box with summary
+    summary_text = f"Summary:\nTotal Events: {total_events:,}\nTotal Fatalities: {total_fatalities:,}\nPeriod: {date_range}"
+    fig.text(0.02, 0.02, summary_text, fontsize=10, bbox=dict(boxstyle="round,pad=0.3", facecolor="lightgray", alpha=0.8))
+    
+    plt.tight_layout()
+    
+    # Save as PNG and PDF
+    ward_name_clean = ward_info['wardname'].replace(' ', '_').replace('/', '_')
+    png_path = os.path.join(output_dir, f"{ward_name_clean}_{ward_info['wardcode']}_timeseries.png")
+    pdf_path = os.path.join(output_dir, f"{ward_name_clean}_{ward_info['wardcode']}_timeseries.pdf")
+    
+    plt.savefig(png_path, dpi=300, bbox_inches='tight')
+    plt.savefig(pdf_path, bbox_inches='tight')
+    plt.close()
+    
+    return png_path, pdf_path
+
+def analyze_violence_types_and_actors(ward_data):
+    """Analyze violence types and actors from ward time series data"""
+    if not ward_data or 'time_series' not in ward_data:
+        return None, None
+    
+    time_series = ward_data['time_series']
+    if not time_series:
+        return None, None
+    
+    # Extract event type breakdowns
+    event_types = {}
+    actors = {}
+    
+    for item in time_series:
+        if 'event_type_breakdown' in item and item['event_type_breakdown']:
+            for event_type, count in item['event_type_breakdown'].items():
+                if event_type in event_types:
+                    event_types[event_type] += count
+                else:
+                    event_types[event_type] = count
+    
+    # Sort by frequency
+    sorted_event_types = sorted(event_types.items(), key=lambda x: x[1], reverse=True)
+    sorted_actors = sorted(actors.items(), key=lambda x: x[1], reverse=True)
+    
+    return sorted_event_types, sorted_actors
+
+def create_violence_analysis_panel(ward_data):
+    """Create analysis panel for violence types and actors"""
+    if not ward_data:
+        return None
+    
+    event_types, actors = analyze_violence_types_and_actors(ward_data)
+    
+    if not event_types:
+        return None
+    
+    # Create event type breakdown
+    event_type_df = pd.DataFrame(event_types, columns=['Event Type', 'Count'])
+    event_type_df['Percentage'] = (event_type_df['Count'] / event_type_df['Count'].sum() * 100).round(1)
+    
+    # Create charts
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
+    
+    # Event types pie chart
+    colors = plt.cm.Set3(range(len(event_types)))
+    wedges, texts, autotexts = ax1.pie(event_type_df['Count'], labels=event_type_df['Event Type'], 
+                                       autopct='%1.1f%%', colors=colors, startangle=90)
+    ax1.set_title('Violence Event Types', fontsize=14, fontweight='bold')
+    
+    # Event types bar chart
+    ax2.barh(event_type_df['Event Type'], event_type_df['Count'], color=colors)
+    ax2.set_title('Event Count by Type', fontsize=14, fontweight='bold')
+    ax2.set_xlabel('Number of Events')
+    
+    # Add count labels on bars
+    for i, v in enumerate(event_type_df['Count']):
+        ax2.text(v + 0.1, i, str(v), va='center', fontweight='bold')
+    
+    plt.tight_layout()
+    
+    return fig, event_type_df
+
+def create_comprehensive_export_data(merged, aggregated, period_info, rate_thresh, abs_thresh, agg_thresh, agg_level, map_var):
+    """Create comprehensive export dataset with all criteria and metadata"""
+    import datetime
+    
+    # Create timestamp for export
+    export_timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # Prepare ward-level data with all relevant fields
+    ward_export = merged.copy()
+    
+    # Add metadata columns
+    ward_export['export_timestamp'] = export_timestamp
+    ward_export['analysis_period'] = period_info['label']
+    ward_export['period_start'] = period_info['start_date'].strftime('%Y-%m-%d')
+    ward_export['period_end'] = period_info['end_date'].strftime('%Y-%m-%d')
+    ward_export['period_months'] = period_info['months']
+    ward_export['rate_threshold_per_100k'] = rate_thresh
+    ward_export['absolute_threshold_deaths'] = abs_thresh
+    ward_export['aggregation_threshold'] = agg_thresh
+    ward_export['aggregation_level'] = agg_level
+    ward_export['map_variable'] = map_var
+    
+    # Add calculated fields for violence classification
+    ward_export['meets_rate_threshold'] = ward_export['acled_total_death_rate'] > rate_thresh
+    ward_export['meets_absolute_threshold'] = ward_export['ACLED_BRD_total'] > abs_thresh
+    ward_export['violence_classification'] = ward_export['violence_affected'].map({True: 'Violence Affected', False: 'Not Affected'})
+    
+    # Add detailed classification categories
+    def get_detailed_classification(row):
+        if row['violence_affected']:
+            return 'VIOLENCE AFFECTED'
+        elif row['ACLED_BRD_total'] > 0:
+            if row['meets_rate_threshold'] and not row['meets_absolute_threshold']:
+                return 'High Rate, Low Deaths'
+            elif not row['meets_rate_threshold'] and row['meets_absolute_threshold']:
+                return 'Low Rate, High Deaths'
+            else:
+                return 'Below Threshold'
+        else:
+            return 'No Violence Recorded'
+    
+    ward_export['detailed_violence_classification'] = ward_export.apply(get_detailed_classification, axis=1)
+    
+    # Add risk level classification
+    def get_risk_level(row):
+        if row['violence_affected']:
+            if row['acled_total_death_rate'] > rate_thresh * 2:
+                return 'Very High Risk'
+            else:
+                return 'High Risk'
+        elif row['ACLED_BRD_total'] > 0:
+            return 'Medium Risk'
+        else:
+            return 'Low Risk'
+    
+    ward_export['risk_level'] = ward_export.apply(get_risk_level, axis=1)
+    
+    # Reorder columns for better readability - violence classification prominently placed
+    column_order = [
+        'export_timestamp', 'analysis_period', 'period_start', 'period_end', 'period_months',
+        'rate_threshold_per_100k', 'absolute_threshold_deaths', 'aggregation_threshold', 
+        'aggregation_level', 'map_variable',
+        'ADM1_PCODE', 'ADM1_EN', 'ADM2_PCODE', 'ADM2_EN', 'ADM3_PCODE', 'ADM3_EN',
+        'pop_count', 'ACLED_BRD_total', 'acled_total_death_rate', 
+        'violence_classification', 'detailed_violence_classification', 'risk_level',
+        'meets_rate_threshold', 'meets_absolute_threshold', 'violence_affected'
+    ]
+    
+    # Select and reorder columns
+    ward_export = ward_export[column_order]
+    
+    # Rename columns for clarity
+    ward_export = ward_export.rename(columns={
+        'ADM1_PCODE': 'state_code',
+        'ADM1_EN': 'state_name', 
+        'ADM2_PCODE': 'lga_code',
+        'ADM2_EN': 'lga_name',
+        'ADM3_PCODE': 'ward_code',
+        'ADM3_EN': 'ward_name',
+        'pop_count': 'population',
+        'ACLED_BRD_total': 'battle_related_deaths',
+        'acled_total_death_rate': 'death_rate_per_100k',
+        'violence_classification': 'violence_status',
+        'detailed_violence_classification': 'detailed_violence_status',
+        'risk_level': 'violence_risk_level',
+        'violence_affected': 'is_violence_affected'
+    })
+    
+    # Prepare aggregated data export
+    if len(aggregated) > 0:
+        agg_export = aggregated.copy()
+        agg_export['export_timestamp'] = export_timestamp
+        agg_export['analysis_period'] = period_info['label']
+        agg_export['period_start'] = period_info['start_date'].strftime('%Y-%m-%d')
+        agg_export['period_end'] = period_info['end_date'].strftime('%Y-%m-%d')
+        agg_export['period_months'] = period_info['months']
+        agg_export['rate_threshold_per_100k'] = rate_thresh
+        agg_export['absolute_threshold_deaths'] = abs_thresh
+        agg_export['aggregation_threshold'] = agg_thresh
+        agg_export['aggregation_level'] = agg_level
+        agg_export['map_variable'] = map_var
+        
+        # Add calculated fields for aggregated data
+        agg_export['meets_aggregation_threshold'] = agg_export['above_threshold']
+        agg_export['violence_classification'] = agg_export['above_threshold'].map({True: 'High Violence', False: 'Low/No Violence'})
+        
+        # Reorder aggregated columns
+        agg_column_order = [
+            'export_timestamp', 'analysis_period', 'period_start', 'period_end', 'period_months',
+            'rate_threshold_per_100k', 'absolute_threshold_deaths', 'aggregation_threshold',
+            'aggregation_level', 'map_variable',
+            'ADM1_PCODE', 'ADM1_EN', 'ADM2_PCODE', 'ADM2_EN',
+            'total_wards', 'violence_affected', 'share_wards_affected', 'share_population_affected',
+            'pop_count', 'ACLED_BRD_total', 'above_threshold', 'meets_aggregation_threshold', 'violence_classification'
+        ]
+        
+        agg_export = agg_export[agg_column_order]
+        
+        # Rename aggregated columns
+        agg_export = agg_export.rename(columns={
+            'ADM1_PCODE': 'state_code',
+            'ADM1_EN': 'state_name',
+            'ADM2_PCODE': 'lga_code', 
+            'ADM2_EN': 'lga_name',
+            'total_wards': 'total_wards_in_unit',
+            'violence_affected': 'affected_wards_count',
+            'share_wards_affected': 'percentage_wards_affected',
+            'share_population_affected': 'percentage_population_affected',
+            'pop_count': 'total_population',
+            'ACLED_BRD_total': 'total_battle_related_deaths',
+            'above_threshold': 'is_high_violence'
+        })
+    else:
+        agg_export = pd.DataFrame()
+    
+    return ward_export, agg_export
 
 # Import mapping and chart functions
 from mapping_functions import create_admin_map, create_ward_map
@@ -954,7 +1226,7 @@ def main():
     
     # Process data
     with st.spinner("Processing analysis..."):
-        aggregated, ward_data = classify_and_aggregate_data(
+        aggregated, merged = classify_and_aggregate_data(
             pop_data, admin_data, conflict_data, period_info, rate_thresh, abs_thresh, agg_thresh, agg_level
         )
     
@@ -964,7 +1236,7 @@ def main():
         above_threshold_count = aggregated['above_threshold'].sum()
         # Get total ward count from population data (which has all wards)
         total_wards = len(pop_data)
-        affected_wards = aggregated['violence_affected'].sum()
+        affected_wards = merged['violence_affected'].sum()
         total_population = aggregated['pop_count'].sum()
         affected_population = aggregated['affected_population'].sum()
         total_deaths = aggregated['ACLED_BRD_total'].sum()
@@ -1012,9 +1284,28 @@ def main():
     st.header("🗺️ Interactive Violence Maps")
     st.markdown("**📍 Administrative Units**: Aggregated analysis by states/LGAs | **🏘️ Ward Classification**: Individual ward violence classification")
     
-    tab1, tab2 = st.tabs(["📍 Administrative Units", "🏘️ Ward Classification"])
+    tab1, tab2 = st.tabs(["🏘️ Ward Classification", "📍 Administrative Units"])
     
     with tab1:
+        st.subheader("Ward-Level Violence Classification")
+        if len(merged) > 0:
+            ward_map = create_ward_map(merged, boundaries, period_info, rate_thresh, abs_thresh)
+            if ward_map:
+                # Use full width for the map
+                map_data = st_folium(ward_map, width=None, height=600, returned_objects=["last_object_clicked"])
+                
+                # Handle ward selection for time series
+                if map_data["last_object_clicked"] is not None:
+                    clicked_data = map_data["last_object_clicked"]
+                    if "properties" in clicked_data and "ADM3_PCODE" in clicked_data["properties"]:
+                        selected_ward_code = clicked_data["properties"]["ADM3_PCODE"]
+                        st.session_state.selected_ward_code = selected_ward_code
+            else:
+                st.error("Could not create ward map due to missing boundary data.")
+        else:
+            st.error("No ward data available for the selected period.")
+    
+    with tab2:
         st.subheader(f"Administrative Units Analysis - {agg_level}")
         if len(aggregated) > 0:
             admin_map = create_admin_map(
@@ -1028,146 +1319,359 @@ def main():
         else:
             st.error("No administrative data available for the selected period.")
     
-    with tab2:
-        st.subheader("Individual Ward Classification")
-        if len(ward_data) > 0:
-            ward_map = create_ward_map(
-                ward_data, boundaries, period_info, rate_thresh, abs_thresh
+    # Ward Analysis Section
+    st.header("🏘️ Individual Ward Analysis")
+    st.markdown("Select a ward to view detailed time series analysis, violence types, and generate static charts.")
+    
+    if len(merged) > 0:
+        # Create ward selection dropdown
+        if 'ward_options' not in st.session_state:
+            ward_options = merged[['ADM3_PCODE', 'ADM3_EN', 'ADM2_EN', 'ADM1_EN']].copy()
+            ward_options['display_name'] = ward_options['ADM3_EN'] + ' (' + ward_options['ADM2_EN'] + ', ' + ward_options['ADM1_EN'] + ')'
+            ward_options = ward_options.sort_values('display_name')
+            st.session_state.ward_options = ward_options
+        else:
+            ward_options = st.session_state.ward_options
+        
+        # Ward selection
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            selected_ward_display = st.selectbox(
+                "Select a ward to analyze:",
+                options=ward_options['display_name'].tolist(),
+                index=None,
+                placeholder="Choose a ward to view detailed analysis...",
+                help="Select a ward to view time series, violence types, and generate static charts"
             )
-            if ward_map:
-                # Use full width for the map
-                st_folium(ward_map, width=None, height=600, returned_objects=["last_object_clicked"])
+        
+        with col2:
+            generate_static_charts = st.checkbox(
+                "Generate Static Charts (PNG/PDF)",
+                value=False,
+                help="Create downloadable PNG and PDF charts for the selected ward"
+            )
+        
+        # Display analysis for selected ward
+        if selected_ward_display:
+            selected_ward_code = ward_options[ward_options['display_name'] == selected_ward_display]['ADM3_PCODE'].iloc[0]
+            
+            # Check if we already have this ward's data cached
+            cache_key = f"ward_data_{selected_ward_code}_{period_info['start_year']}_{period_info['start_month']}_{period_info['end_year']}_{period_info['end_month']}"
+            
+            if cache_key not in st.session_state:
+                with st.spinner(f"Loading analysis for {selected_ward_display}..."):
+                    ward_timeseries_data = get_ward_timeseries_data(selected_ward_code, period_info)
+                    if ward_timeseries_data:
+                        st.session_state[cache_key] = ward_timeseries_data
+            else:
+                ward_timeseries_data = st.session_state[cache_key]
                 
-                # Add ward selection functionality
-                st.markdown("---")
-                st.subheader("📊 Ward Time Series Analysis")
-                st.markdown("Select a ward from the dropdown below to view its historical events and fatalities over time.")
-                
-                # Create ward selection dropdown (cached for performance)
-                if 'ward_options' not in st.session_state:
-                    ward_options = ward_data[['ADM3_PCODE', 'ADM3_EN', 'ADM2_EN', 'ADM1_EN']].copy()
-                    ward_options['display_name'] = ward_options['ADM3_EN'] + ' (' + ward_options['ADM2_EN'] + ', ' + ward_options['ADM1_EN'] + ')'
-                    ward_options = ward_options.sort_values('display_name')
-                    st.session_state.ward_options = ward_options
-                else:
-                    ward_options = st.session_state.ward_options
-                
-                # Create dropdown
-                selected_ward_display = st.selectbox(
-                    "Select a ward to analyze:",
-                    options=ward_options['display_name'].tolist(),
-                    index=0,
-                    help="Choose a ward to view its time series data"
-                )
-                
-                # Get the ward code for the selected ward
-                if selected_ward_display:
-                    selected_ward_code = ward_options[ward_options['display_name'] == selected_ward_display]['ADM3_PCODE'].iloc[0]
+                if ward_timeseries_data:
+                    # Display ward info
+                    ward_info = ward_timeseries_data['ward_info']
+                    st.markdown(f"""
+                    **Selected Ward:** {ward_info['wardname']}  
+                    **LGA:** {ward_info['lganame']}  
+                    **State:** {ward_info['statename']}  
+                    **Ward Code:** {ward_info['wardcode']}
+                    """)
                     
-                    # Display time series for selected ward
-                    with st.spinner(f"Loading time series data for {selected_ward_display}..."):
-                        ward_timeseries_data = get_ward_timeseries_data(selected_ward_code, period_info)
+                    # Create two columns for time series and analysis
+                    col1, col2 = st.columns([2, 1])
+                    
+                    with col1:
+                        st.subheader("📈 Time Series Analysis")
                         
-                        if ward_timeseries_data:
-                            # Display ward info
-                            ward_info = ward_timeseries_data['ward_info']
-                            st.markdown(f"""
-                            **Selected Ward:** {ward_info['wardname']}  
-                            **LGA:** {ward_info['lganame']}  
-                            **State:** {ward_info['statename']}  
-                            **Ward Code:** {ward_info['wardcode']}
-                            """)
+                        # Check if ward has violence data
+                        time_series = ward_timeseries_data.get('time_series', [])
+                        
+                        if not time_series or all(item['event_count'] == 0 and item['total_fatalities'] == 0 for item in time_series):
+                            # No violence data
+                            st.info("📊 **No violence data reported** for this ward during the selected period.")
                             
-                            # Create and display time series plot
-                            timeseries_fig = create_ward_timeseries_plot(ward_timeseries_data)
-                            if timeseries_fig:
-                                st.plotly_chart(timeseries_fig, use_container_width=True)
+                            # Show basic ward information
+                            col1_1, col1_2, col1_3 = st.columns(3)
+                            with col1_1:
+                                st.metric("Total Events", "0")
+                            with col1_2:
+                                st.metric("Total Fatalities", "0")
+                            with col1_3:
+                                st.metric("Status", "No Violence")
+                        else:
+                            # Has violence data - load pre-generated static charts instantly
+                            try:
+                                # Try to load pre-generated static chart
+                                ward_name_clean = ward_info['wardname'].replace(' ', '_').replace('/', '_')
+                                png_path = f"data/processed/static_charts/{ward_name_clean}_{ward_info['wardcode']}_timeseries.png"
+                                pdf_path = f"data/processed/static_charts/{ward_name_clean}_{ward_info['wardcode']}_timeseries.pdf"
                                 
-                                # Display summary statistics
-                                time_series = ward_timeseries_data['time_series']
-                                if time_series:
+                                if os.path.exists(png_path):
+                                    # Display the pre-generated PNG image instantly
+                                    st.image(png_path, caption=f"Time Series Analysis - {ward_info['wardname']}", use_column_width=True)
+                                    
+                                    # Display summary statistics
                                     total_events = sum(item['event_count'] for item in time_series)
                                     total_fatalities = sum(item['total_fatalities'] for item in time_series)
                                     date_range = f"{time_series[0]['year_month']} to {time_series[-1]['year_month']}"
                                     
-                                    col1, col2, col3 = st.columns(3)
-                                    with col1:
+                                    col1_1, col1_2, col1_3 = st.columns(3)
+                                    with col1_1:
                                         st.metric("Total Events", f"{total_events:,}")
-                                    with col2:
+                                    with col1_2:
                                         st.metric("Total Fatalities", f"{total_fatalities:,}")
-                                    with col3:
+                                    with col1_3:
                                         st.metric("Date Range", date_range)
-                            else:
-                                st.error("Could not create time series plot.")
-                        else:
-                            st.warning(f"No time series data found for ward {selected_ward_code}")
+                                    
+                                    # Download buttons for static charts
+                                    st.markdown("**📥 Download Charts:**")
+                                    col_dl1, col_dl2 = st.columns(2)
+                                    
+                                    with col_dl1:
+                                        with open(png_path, "rb") as file:
+                                            st.download_button(
+                                                label="📊 Download PNG",
+                                                data=file.read(),
+                                                file_name=f"{ward_info['wardname'].replace(' ', '_')}_timeseries.png",
+                                                mime="image/png",
+                                                use_container_width=True
+                                            )
+                                    
+                                    with col_dl2:
+                                        with open(pdf_path, "rb") as file:
+                                            st.download_button(
+                                                label="📄 Download PDF",
+                                                data=file.read(),
+                                                file_name=f"{ward_info['wardname'].replace(' ', '_')}_timeseries.pdf",
+                                                mime="application/pdf",
+                                                use_container_width=True
+                                            )
+                                else:
+                                    # Fallback: generate chart on demand
+                                    png_path, pdf_path = create_static_timeseries_charts(ward_timeseries_data)
+                                    if png_path and pdf_path:
+                                        st.image(png_path, caption=f"Time Series Analysis - {ward_info['wardname']}", use_column_width=True)
+                                    else:
+                                        st.error("Failed to generate static charts.")
+                            except Exception as e:
+                                st.error(f"Error loading static charts: {str(e)}")
                         
-            else:
-                st.error("Could not create ward map due to missing boundary data.")
-        else:
-            st.error("No ward data available for the selected period.")
+                        # Commented out dynamic Plotly charts to avoid Arrow serialization issues
+                        # timeseries_fig = create_ward_timeseries_plot(ward_timeseries_data)
+                        # if timeseries_fig:
+                        #     st.plotly_chart(timeseries_fig, use_container_width=True)
+                    
+                    with col2:
+                        st.subheader("🎯 Violence Analysis")
+                        
+                        # Display violence type breakdown as text and table (avoiding matplotlib issues)
+                        time_series = ward_timeseries_data.get('time_series', [])
+                        
+                        if not time_series or all(item['event_count'] == 0 and item['total_fatalities'] == 0 for item in time_series):
+                            # No violence data
+                            st.info("📊 **No violence data reported** for this ward during the selected period.")
+                            
+                            # Show basic metrics
+                            col2_1, col2_2 = st.columns(2)
+                            with col2_1:
+                                st.metric("Event Types", "None")
+                            with col2_2:
+                                st.metric("Risk Level", "Low")
+                        else:
+                            # Has violence data
+                            event_types, actors = analyze_violence_types_and_actors(ward_timeseries_data)
+                            if event_types:
+                                st.markdown("**Violence Event Types:**")
+                                
+                                # Create a simple table display
+                                event_data = []
+                                total_events = sum(count for _, count in event_types)
+                                
+                                for event_type, count in event_types:
+                                    percentage = (count / total_events * 100) if total_events > 0 else 0
+                                    event_data.append({
+                                        'Event Type': event_type,
+                                        'Count': count,
+                                        'Percentage': f"{percentage:.1f}%"
+                                    })
+                                
+                                # Display event types as a simple table to avoid Arrow serialization issues
+                                for i, (event_type, count, percentage) in enumerate(zip([item['Event Type'] for item in event_data], 
+                                                                                      [item['Count'] for item in event_data], 
+                                                                                      [item['Percentage'] for item in event_data])):
+                                    col_a, col_b, col_c = st.columns([2, 1, 1])
+                                    with col_a:
+                                        st.write(f"**{event_type}**")
+                                    with col_b:
+                                        st.write(f"{count}")
+                                    with col_c:
+                                        st.write(f"{percentage}")
+                                
+                                # Display top event types as metrics
+                                if len(event_types) > 0:
+                                    st.markdown("**Top Event Types:**")
+                                    col2_1, col2_2 = st.columns(2)
+                                    
+                                    with col2_1:
+                                        st.metric(
+                                            f"1. {event_types[0][0]}", 
+                                            f"{event_types[0][1]} events",
+                                            f"{(event_types[0][1]/total_events*100):.1f}%"
+                                        )
+                                    
+                                    with col2_2:
+                                        if len(event_types) > 1:
+                                            st.metric(
+                                                f"2. {event_types[1][0]}", 
+                                                f"{event_types[1][1]} events",
+                                                f"{(event_types[1][1]/total_events*100):.1f}%"
+                                            )
+                            else:
+                                st.info("No violence type data available for this ward.")
+                        
+                        # Commented out matplotlib charts to avoid serialization issues
+                        # analysis_result = create_violence_analysis_panel(ward_timeseries_data)
+                        # if analysis_result:
+                        #     analysis_fig, event_type_df = analysis_result
+                        #     st.pyplot(analysis_fig)
+                    
+                    # Static charts are now generated automatically above
+                    # The checkbox is kept for future use if needed
+                else:
+                    st.warning(f"No time series data found for ward {selected_ward_code}")
+    else:
+        st.error("No ward data available for analysis.")
     
+    # Enhanced Data Export Section
+    st.header("📥 Comprehensive Data Export")
+    st.markdown("Download filtered datasets with all analysis criteria, thresholds, and metadata included.")
     
-    # Data Export Section
-    st.header("📥 Data Export")
+    # Create comprehensive export data
+    ward_export, agg_export = create_comprehensive_export_data(
+        merged, aggregated, period_info, rate_thresh, abs_thresh, agg_thresh, agg_level, map_var
+    )
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("📊 Export Aggregated Data", use_container_width=True):
-            if len(aggregated) > 0:
-                csv = aggregated.to_csv(index=False)
-                st.download_button(
-                    label="Download Aggregated Data CSV",
-                    data=csv,
-                    file_name=f"nigeria_aggregated_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv",
-                    mime="text/csv",
-                    use_container_width=True
-                )
-            else:
-                st.error("No aggregated data to export.")
+        st.subheader("🏘️ Ward-Level Data")
+        st.markdown(f"**{len(ward_export):,} wards** with complete analysis")
+        
+        if len(ward_export) > 0:
+            # Show sample of data
+            with st.expander("📋 Preview Ward Data"):
+                st.dataframe(ward_export.head(10), use_container_width=True)
+            
+            csv = ward_export.to_csv(index=False)
+            filename = f"nigeria_wards_comprehensive_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv"
+            st.download_button(
+                label="📥 Download Ward Data (CSV)",
+                data=csv,
+                file_name=filename,
+                mime="text/csv",
+                use_container_width=True,
+                help="Complete ward-level dataset with all criteria, thresholds, and metadata"
+            )
+        else:
+            st.error("No ward data to export.")
     
     with col2:
-        if st.button("🏘️ Export Ward Data", use_container_width=True):
-            if len(ward_data) > 0:
-                csv = ward_data.to_csv(index=False)
-                st.download_button(
-                    label="Download Ward Data CSV",
-                    data=csv,
-                    file_name=f"nigeria_wards_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv",
-                    mime="text/csv",
-                    use_container_width=True
-                )
-            else:
-                st.error("No ward data to export.")
+        st.subheader("📊 Aggregated Data")
+        st.markdown(f"**{len(agg_export):,} administrative units** ({agg_level})")
+        
+        if len(agg_export) > 0:
+            # Show sample of data
+            with st.expander("📋 Preview Aggregated Data"):
+                st.dataframe(agg_export.head(10), use_container_width=True)
+            
+            csv = agg_export.to_csv(index=False)
+            filename = f"nigeria_aggregated_{agg_level}_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv"
+            st.download_button(
+                label="📥 Download Aggregated Data (CSV)",
+                data=csv,
+                file_name=filename,
+                mime="text/csv",
+                use_container_width=True,
+                help="Administrative unit aggregated data with all criteria and metadata"
+            )
+        else:
+            st.error("No aggregated data to export.")
     
     with col3:
-        if st.button("📈 Export Analysis Summary", use_container_width=True):
-            if len(aggregated) > 0:
-                summary_data = {
-                    'period': [period_info['label']],
-                    'period_type': [period_info['type']],
-                    'total_units': [total_units],
-                    'high_violence_units': [above_threshold_count],
-                    'total_wards': [total_wards],
-                    'affected_wards': [affected_wards],
-                    'total_population': [total_population],
-                    'affected_population': [affected_population],
-                    'total_deaths': [total_deaths],
-                    'national_death_rate': [(total_deaths/total_population)*1e5],
-                    'analysis_timestamp': [datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')]
-                }
-                summary_df = pd.DataFrame(summary_data)
-                csv = summary_df.to_csv(index=False)
-                st.download_button(
-                    label="Download Summary CSV",
-                    data=csv,
-                    file_name=f"nigeria_summary_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv",
-                    mime="text/csv",
-                    use_container_width=True
-                )
-            else:
-                st.error("No summary data to export.")
+        st.subheader("📈 Analysis Summary")
+        st.markdown("**Complete analysis metadata** and key statistics")
+        
+        # Create comprehensive summary
+        summary_data = {
+            'export_timestamp': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'analysis_period': period_info['label'],
+            'period_start': period_info['start_date'].strftime('%Y-%m-%d'),
+            'period_end': period_info['end_date'].strftime('%Y-%m-%d'),
+            'period_months': period_info['months'],
+            'rate_threshold_per_100k': rate_thresh,
+            'absolute_threshold_deaths': abs_thresh,
+            'aggregation_threshold': agg_thresh,
+            'aggregation_level': agg_level,
+            'map_variable': map_var,
+            'total_wards_analyzed': total_wards,
+            'affected_wards_count': affected_wards,
+            'affected_wards_percentage': f"{affected_wards/total_wards*100:.1f}%",
+            'total_population': total_population,
+            'affected_population': affected_population,
+            'affected_population_percentage': f"{affected_population/total_population*100:.1f}%",
+            'total_battle_related_deaths': total_deaths,
+            'average_death_rate_per_100k': f"{total_deaths/(total_population/1e5):.1f}",
+            'data_source': 'ACLED + Nigeria Administrative Boundaries',
+            'analysis_method': 'Spatial intersection with ward-level aggregation'
+        }
+        
+        summary_df = pd.DataFrame([summary_data])
+        
+        # Show summary
+        with st.expander("📋 View Analysis Summary"):
+            st.dataframe(summary_df.T, use_container_width=True)
+        
+        csv = summary_df.to_csv(index=False)
+        filename = f"nigeria_analysis_summary_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv"
+        st.download_button(
+            label="📥 Download Analysis Summary (CSV)",
+            data=csv,
+            file_name=filename,
+            mime="text/csv",
+            use_container_width=True,
+            help="Complete analysis metadata and key statistics"
+        )
+    
+    # Additional export information
+    st.markdown("---")
+    st.subheader("📋 Export Information")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        **Ward-Level Data Includes:**
+        - Export timestamp and analysis metadata
+        - Date range and period information
+        - All threshold values used
+        - State, LGA, and Ward identifiers
+        - Population and BRD statistics
+        - **Violence Status**: Violence Affected / Not Affected
+        - **Detailed Violence Status**: VIOLENCE AFFECTED, Below Threshold, No Violence Recorded, etc.
+        - **Risk Level**: Very High, High, Medium, Low Risk
+        - Threshold compliance indicators
+        """)
+    
+    with col2:
+        st.markdown("""
+        **Aggregated Data Includes:**
+        - All ward-level metadata
+        - Administrative unit aggregations
+        - Share calculations (wards/population affected)
+        - High violence classifications
+        - Total statistics per unit
+        - Analysis methodology notes
+        """)
     
     # Performance monitoring section (expandable)
     with st.expander("⚡ Performance Metrics", expanded=False):
