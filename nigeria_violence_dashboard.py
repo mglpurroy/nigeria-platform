@@ -1018,7 +1018,7 @@ def main():
     st.markdown("""
     <div class="main-header">
         <h1>🇳🇬 Nigeria Violence Analysis Dashboard</h1>
-        <p>Interactive analysis with 12-month periods and comprehensive ward mapping</p>
+        <p>Interactive violence analysis over time and space</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -1342,15 +1342,10 @@ def main():
                 options=ward_options['display_name'].tolist(),
                 index=None,
                 placeholder="Choose a ward to view detailed analysis...",
-                help="Select a ward to view time series, violence types, and generate static charts"
+                help="Select a ward to view time series analysis and violence types"
             )
         
-        with col2:
-            generate_static_charts = st.checkbox(
-                "Generate Static Charts (PNG/PDF)",
-                value=False,
-                help="Create downloadable PNG and PDF charts for the selected ward"
-            )
+        # Static charts are now shown by default - no checkbox needed
         
         # Display analysis for selected ward
         if selected_ward_display:
@@ -1535,8 +1530,7 @@ def main():
                         #     analysis_fig, event_type_df = analysis_result
                         #     st.pyplot(analysis_fig)
                     
-                    # Static charts are now generated automatically above
-                    # The checkbox is kept for future use if needed
+                    # Static charts are displayed automatically above
                 else:
                     st.warning(f"No time series data found for ward {selected_ward_code}")
     else:
