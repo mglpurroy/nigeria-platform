@@ -9,17 +9,17 @@ def create_admin_map(aggregated, boundaries, agg_level, map_var, agg_thresh, per
     import time
     start_time = time.time()
     
-    # Determine columns based on actual boundary file structure
+    # Determine columns based on ward-based boundary structure
     if agg_level == 'ADM1':
         # State level
-        pcode_col = 'statecode'  # From boundary file
-        name_col = 'statename'   # From boundary file
+        pcode_col = 'ADM1_PCODE'  # From ward-based boundary file
+        name_col = 'ADM1_EN'      # From ward-based boundary file
         agg_pcode_col = 'ADM1_PCODE'  # From aggregated data
         agg_name_col = 'ADM1_EN'      # From aggregated data
     else:
         # LGA level  
-        pcode_col = 'lgacode'    # From boundary file
-        name_col = 'lganame'     # From boundary file
+        pcode_col = 'ADM2_PCODE'  # From ward-based boundary file
+        name_col = 'ADM2_EN'      # From ward-based boundary file
         agg_pcode_col = 'ADM2_PCODE'  # From aggregated data
         agg_name_col = 'ADM2_EN'      # From aggregated data
     
@@ -133,7 +133,7 @@ def create_admin_map(aggregated, boundaries, agg_level, map_var, agg_thresh, per
                     'fillOpacity': 0,
                     'opacity': 0.8
                 },
-                tooltip=f"State: {row.get('statename', 'Unknown')}"
+                tooltip=f"State: {row.get('ADM1_EN', 'Unknown')}"
             ).add_to(m)
     
     m.get_root().html.add_child(folium.Element(legend_html))
@@ -153,9 +153,9 @@ def create_ward_map(ward_data, boundaries, period_info, rate_thresh, abs_thresh)
         return None
     
     # Merge with classification data using optimized merge
-    # Ward boundaries use 'wardcode' column, ward data uses 'ADM3_PCODE'
+    # Ward boundaries now use 'ADM3_PCODE' column (same as ward data)
     merge_cols = ['ADM3_PCODE', 'ADM3_EN', 'ADM2_EN', 'ADM1_EN', 'pop_count', 'violence_affected', 'ACLED_BRD_total', 'acled_total_death_rate']
-    merged_ward = ward_gdf.merge(ward_data[merge_cols], left_on='wardcode', right_on='ADM3_PCODE', how='left')
+    merged_ward = ward_gdf.merge(ward_data[merge_cols], on='ADM3_PCODE', how='left')
     
     # Use vectorized fillna
     fill_values = {
@@ -230,7 +230,7 @@ def create_ward_map(ward_data, boundaries, period_info, rate_thresh, abs_thresh)
                 'fillOpacity': opacity
             },
             popup=folium.Popup(popup_content, max_width=270),
-            tooltip=f"{row.get('wardname', 'Unknown')}: {status}"
+            tooltip=f"{row.get('ADM3_EN', 'Unknown')}: {status}"
         )
         
         # Add ward code to popup for click detection
@@ -238,10 +238,10 @@ def create_ward_map(ward_data, boundaries, period_info, rate_thresh, abs_thresh)
             folium.Popup(
                 f"""
                 <div style="width: 200px;">
-                    <h4>{row.get('wardname', 'Unknown')}</h4>
-                    <p><strong>Ward Code:</strong> {row.get('wardcode', 'Unknown')}</p>
-                    <p><strong>LGA:</strong> {row.get('lganame', 'Unknown')}</p>
-                    <p><strong>State:</strong> {row.get('statename', 'Unknown')}</p>
+                    <h4>{row.get('ADM3_EN', 'Unknown')}</h4>
+                    <p><strong>Ward Code:</strong> {row.get('ADM3_PCODE', 'Unknown')}</p>
+                    <p><strong>LGA:</strong> {row.get('ADM2_EN', 'Unknown')}</p>
+                    <p><strong>State:</strong> {row.get('ADM1_EN', 'Unknown')}</p>
                     <p><strong>Deaths:</strong> {row['ACLED_BRD_total']:,.0f}</p>
                     <p><strong>Rate:</strong> {row['acled_total_death_rate']:.1f}/100k</p>
                     <p style="color: #666; font-size: 10px;">Click to select for time series analysis</p>
@@ -266,7 +266,7 @@ def create_ward_map(ward_data, boundaries, period_info, rate_thresh, abs_thresh)
                     'fillOpacity': 0,
                     'opacity': 0.8
                 },
-                tooltip=f"State: {row.get('statename', 'Unknown')}"
+                tooltip=f"State: {row.get('ADM1_EN', 'Unknown')}"
             ).add_to(m)
     
     # Simplified legend

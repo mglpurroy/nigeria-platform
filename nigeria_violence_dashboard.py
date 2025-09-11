@@ -186,50 +186,50 @@ def load_population_data():
     start_time = time.time()
     
     # Check cache first
-    cache_key = get_cache_key("nigeria_population_data", "v2")
+    cache_key = get_cache_key("nigeria_population_data", "v4_ward_shapefile_fixed")
     cached_data = load_from_cache(cache_key)
     if cached_data is not None:
         log_performance("load_population_data", time.time() - start_time)
         return cached_data
     
     try:
-        # Load ward-level population data
-        # Try comprehensive dataset first, fallback to original
-        comprehensive_file = PROCESSED_PATH / "nigeria_ward_population_comprehensive.json"
-        ward_file = PROCESSED_PATH / "nigeria_ward_population.json"
+        # Load population data from ward shapefile
+        ward_file = DATA_PATH / "wards" / "wards.shp"
         
-        if comprehensive_file.exists():
-            # Load comprehensive ward population data
-            with open(comprehensive_file, 'r') as f:
-                ward_data = json.load(f)
+        if ward_file.exists():
+            # Load population data from ward shapefile
+            ward_gdf = gpd.read_file(ward_file)
             
-            # Convert to DataFrame (comprehensive data is already in the right format)
-            result_df = pd.DataFrame(ward_data)
+            # Extract population data and standardize column names
+            result_df = pd.DataFrame({
+                'ADM3_PCODE': ward_gdf['ward_cd'],
+                'ADM1_PCODE': ward_gdf['stat_cd'],
+                'ADM2_PCODE': ward_gdf['lga_cod'],
+                'ADM3_EN': ward_gdf['wrd_nm_x'],
+                'ADM0_PCODE': 'NGA',  # Nigeria country code
+                'pop_count': ward_gdf['total_pop'].fillna(0).astype(int),
+                'pop_count_millions': ward_gdf['total_pop'].fillna(0) / 1e6
+            })
             
-        elif ward_file.exists():
-            # Fallback to original dataset
-            with open(ward_file, 'r') as f:
-                ward_data = json.load(f)
+            # Add state and LGA names using mapping from LGA boundaries
+            lga_file = DATA_PATH / "nga_lga_boundaries.geojson"
+            if lga_file.exists():
+                lga_gdf = gpd.read_file(lga_file)
+                # Create mapping dictionaries
+                state_mapping = dict(zip(lga_gdf['statecode'], lga_gdf['statename']))
+                lga_mapping = dict(zip(lga_gdf['lgacode'], lga_gdf['lganame']))
+                
+                # Map state and LGA names
+                result_df['ADM1_EN'] = result_df['ADM1_PCODE'].map(state_mapping).fillna(result_df['ADM1_PCODE'])
+                result_df['ADM2_EN'] = result_df['ADM2_PCODE'].map(lga_mapping).fillna(result_df['ADM2_PCODE'])
+            else:
+                # Fallback to using codes as names
+                result_df['ADM1_EN'] = result_df['ADM1_PCODE']
+                result_df['ADM2_EN'] = result_df['ADM2_PCODE']
             
-            # Convert to DataFrame
-            population_data = []
-            for item in ward_data['data']:
-                population_data.append({
-                    'ADM3_PCODE': item.get('wardcode', ''),
-                    'ADM3_EN': item.get('wardname', ''),
-                    'ADM2_PCODE': item.get('lgacode', ''),
-                    'ADM2_EN': item.get('lganame', ''),
-                    'ADM1_PCODE': item.get('statecode', ''),
-                    'ADM1_EN': item.get('statename', ''),
-                    'ADM0_PCODE': 'NGA',  # Nigeria country code
-                    'pop_count': float(item.get('population', 0)),
-                    'pop_count_millions': float(item.get('population', 0)) / 1e6
-                })
-            
-            result_df = pd.DataFrame(population_data)
         else:
-            st.error(f"No ward population files found")
-            return pd.DataFrame()
+            # Fallback to empty DataFrame if ward file doesn't exist
+            result_df = pd.DataFrame(columns=['ADM3_PCODE', 'ADM1_PCODE', 'ADM2_PCODE', 'ADM3_EN', 'ADM0_PCODE', 'ADM1_EN', 'ADM2_EN', 'pop_count', 'pop_count_millions'])
         
         # Cache the result
         save_to_cache(cache_key, result_df)
@@ -416,12 +416,12 @@ def load_conflict_data():
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_admin_boundaries():
-    """Load administrative boundaries from GeoJSON files"""
+    """Load administrative boundaries from ward shapefile and build aggregations"""
     import time
     start_time = time.time()
     
     # Check cache first
-    cache_key = get_cache_key("nigeria_admin_boundaries", "v2")
+    cache_key = get_cache_key("nigeria_admin_boundaries", "v3_ward_only")
     cached_data = load_from_cache(cache_key)
     if cached_data is not None:
         log_performance("load_admin_boundaries", time.time() - start_time)
@@ -429,47 +429,60 @@ def load_admin_boundaries():
     
     boundaries = {}
     try:
-        # Try comprehensive ward boundaries first, fallback to original
-        comprehensive_ward_file = DATA_PATH / "nga_ward_boundaries_comprehensive.geojson"
-        ward_file = DATA_PATH / "nga_ward_boundaries.geojson"
+        # Load ward shapefile
+        ward_file = DATA_PATH / "wards" / "wards.shp"
         
-        if comprehensive_ward_file.exists():
-            # Load comprehensive ward boundaries
-            ward_gdf = gpd.read_file(comprehensive_ward_file)
-            ward_gdf = ward_gdf.to_crs('EPSG:4326')
-            boundaries[3] = ward_gdf
-        elif ward_file.exists():
-            # Fallback to original boundaries
+        if ward_file.exists():
+            # Load ward shapefile
             ward_gdf = gpd.read_file(ward_file)
             ward_gdf = ward_gdf.to_crs('EPSG:4326')
+            
+            # Standardize column names to match expected format
+            ward_gdf = ward_gdf.rename(columns={
+                'ward_cd': 'ADM3_PCODE',
+                'stat_cd': 'ADM1_PCODE', 
+                'lga_cod': 'ADM2_PCODE',
+                'wrd_nm_x': 'ADM3_EN'
+            })
+            
+            # Load LGA boundaries to get proper state and LGA names
+            lga_file = DATA_PATH / "nga_lga_boundaries.geojson"
+            if lga_file.exists():
+                lga_gdf = gpd.read_file(lga_file)
+                # Create mapping dictionaries
+                state_mapping = dict(zip(lga_gdf['statecode'], lga_gdf['statename']))
+                lga_mapping = dict(zip(lga_gdf['lgacode'], lga_gdf['lganame']))
+                
+                # Map state and LGA names
+                ward_gdf['ADM1_EN'] = ward_gdf['ADM1_PCODE'].map(state_mapping).fillna(ward_gdf['ADM1_PCODE'])
+                ward_gdf['ADM2_EN'] = ward_gdf['ADM2_PCODE'].map(lga_mapping).fillna(ward_gdf['ADM2_PCODE'])
+            else:
+                # Fallback to using codes as names
+                ward_gdf['ADM1_EN'] = ward_gdf['ADM1_PCODE']
+                ward_gdf['ADM2_EN'] = ward_gdf['ADM2_PCODE']
+                
             boundaries[3] = ward_gdf
-        else:
-            boundaries[3] = gpd.GeoDataFrame()
-        
-        # Load LGA boundaries
-        lga_file = DATA_PATH / "nga_lga_boundaries.geojson"
-        if lga_file.exists():
-            lga_gdf = gpd.read_file(lga_file)
-            lga_gdf = lga_gdf.to_crs('EPSG:4326')
+            
+            # Build LGA boundaries by dissolving wards
+            lga_gdf = ward_gdf.dissolve(by=['ADM1_PCODE', 'ADM2_PCODE', 'ADM1_EN', 'ADM2_EN'], aggfunc='first')
+            lga_gdf = lga_gdf.reset_index()
             boundaries[2] = lga_gdf
-        else:
-            boundaries[2] = gpd.GeoDataFrame()
-        
-        # Load state boundaries
-        state_file = DATA_PATH / "nga_state_boundaries.geojson"
-        if state_file.exists():
-            state_gdf = gpd.read_file(state_file)
-            state_gdf = state_gdf.to_crs('EPSG:4326')
+            
+            # Build State boundaries by dissolving LGAs
+            state_gdf = lga_gdf.dissolve(by=['ADM1_PCODE', 'ADM1_EN'], aggfunc='first')
+            state_gdf = state_gdf.reset_index()
             boundaries[1] = state_gdf
+            
         else:
-            boundaries[1] = gpd.GeoDataFrame()
-        
+            # Fallback to empty GeoDataFrames if ward file doesn't exist
+            boundaries = {1: gpd.GeoDataFrame(), 2: gpd.GeoDataFrame(), 3: gpd.GeoDataFrame()}
+            
     except Exception as e:
+        st.error(f"Error loading administrative boundaries: {str(e)}")
         boundaries = {1: gpd.GeoDataFrame(), 2: gpd.GeoDataFrame(), 3: gpd.GeoDataFrame()}
     
-    # Cache the result
+    # Cache the results
     save_to_cache(cache_key, boundaries)
-    
     log_performance("load_admin_boundaries", time.time() - start_time)
     return boundaries
 
@@ -1102,11 +1115,9 @@ def main():
             
             st.session_state.data_loaded = True
             
-            # Preload ward timeseries data for better performance
-            if not st.session_state.ward_timeseries_loaded:
-                with st.spinner("Preloading ward time series data..."):
-                    load_all_ward_timeseries_data()
-                    st.session_state.ward_timeseries_loaded = True
+            # Skip preloading ward timeseries data to avoid memory issues
+            # Data will be loaded on-demand when needed
+            st.session_state.ward_timeseries_loaded = True
             
             data_load_time = time.time() - data_start_time
             log_performance("data_loading", data_load_time)
@@ -1472,9 +1483,12 @@ def main():
         st.markdown(f"**{len(ward_export):,} wards** with complete analysis")
         
         if len(ward_export) > 0:
-            # Show sample of data
+            # Show sample of data (avoiding dataframe to prevent Arrow serialization issues)
             with st.expander("📋 Preview Ward Data"):
-                st.dataframe(ward_export.head(10), use_container_width=True)
+                st.markdown("**Sample of ward data:**")
+                for i, row in ward_export.head(5).iterrows():
+                    st.write(f"• {row['ward_name']} ({row['lga_name']}, {row['state_name']}) - {row['violence_status']}")
+                st.write(f"... and {len(ward_export)-5} more wards")
             
             csv = ward_export.to_csv(index=False)
             filename = f"nigeria_wards_comprehensive_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv"
@@ -1494,9 +1508,12 @@ def main():
         st.markdown(f"**{len(agg_export):,} administrative units** ({agg_level})")
         
         if len(agg_export) > 0:
-            # Show sample of data
+            # Show sample of data (avoiding dataframe to prevent Arrow serialization issues)
             with st.expander("📋 Preview Aggregated Data"):
-                st.dataframe(agg_export.head(10), use_container_width=True)
+                st.markdown("**Sample of aggregated data:**")
+                for i, row in agg_export.head(5).iterrows():
+                    st.write(f"• {row['state_name'] if agg_level == 'ADM1' else row['lga_name']} - {row['percentage_wards_affected']:.1%} wards affected")
+                st.write(f"... and {len(agg_export)-5} more units")
             
             csv = agg_export.to_csv(index=False)
             filename = f"nigeria_aggregated_{agg_level}_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv"
@@ -1541,9 +1558,11 @@ def main():
         
         summary_df = pd.DataFrame([summary_data])
         
-        # Show summary
+        # Show summary (avoiding dataframe to prevent Arrow serialization issues)
         with st.expander("📋 View Analysis Summary"):
-            st.dataframe(summary_df.T, use_container_width=True)
+            st.markdown("**Analysis Summary:**")
+            for key, value in summary_data.items():
+                st.write(f"• **{key.replace('_', ' ').title()}:** {value}")
         
         csv = summary_df.to_csv(index=False)
         filename = f"nigeria_analysis_summary_{period_info['label'].replace(' ', '_').replace('-', '_')}.csv"
@@ -1608,8 +1627,10 @@ def main():
                 })
             
             if perf_data:
-                perf_df = pd.DataFrame(perf_data)
-                st.dataframe(perf_df, use_container_width=True)
+                # Show performance data (avoiding dataframe to prevent Arrow serialization issues)
+                st.markdown("**Performance Metrics:**")
+                for item in perf_data:
+                    st.write(f"• **{item['Function']}:** Avg {item['Avg Time (s)']}s, {item['Calls']} calls")
                 
                 # Performance tips
                 st.markdown("""
